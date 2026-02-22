@@ -1,0 +1,21 @@
+# DOCUMENTATION: https://docs.artillex-studios.com/axafkzone.html
+
+prefix: "<gradient:#FF8800:#CC0055><b>AFK</b></gradient> &7» "
+
+# 1 - HH:MM:SS (01:25:35), 2 - short (20m), 3 - text (01h 25m 35s)
+timer-format: 1
+
+command-aliases:
+  - "axafkzone"
+  - "afkzone"
+  - "axaz"
+
+reset-after-reward: false
+zone-per-ip-limit: -1
+bossbar-direction: 0
+
+update-notifier:
+  enabled: true
+  on-join: false
+
+version: 2

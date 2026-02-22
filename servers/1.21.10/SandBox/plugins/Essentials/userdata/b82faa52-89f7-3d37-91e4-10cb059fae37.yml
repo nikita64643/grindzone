@@ -1,0 +1,51 @@
+teleportenabled: true
+teleportauto: false
+godmode: true
+muted: false
+jailed: false
+ip-address: 192.168.0.104
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: true
+timestamps:
+  lastteleport: 1771751715138
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1771758144046
+  login: 1771758139458
+  kits:
+    premium: 1770458342154
+    color: 1770458366948
+money: '125.7948955392568335'
+last-account-name: nikita64643
+logoutlocation:
+  world: a2f3b4f2-1526-4752-b5a1-42f750d69b00
+  world-name: world_sandbox
+  x: 8659488.234717404
+  y: 76.53260614832628
+  z: -3812026.6701136837
+  yaw: 53.61800003051758
+  pitch: 30.300003051757812
+nickname: §dnikita64643
+lastlocation:
+  world: a2f3b4f2-1526-4752-b5a1-42f750d69b00
+  world-name: world_sandbox
+  x: 8659486.480726648
+  y: 71.0
+  z: -3812023.9557473543
+  yaw: 126.96784973144531
+  pitch: 0.7500006556510925
+homes:
+  home:
+    world: a2f3b4f2-1526-4752-b5a1-42f750d69b00
+    world-name: world_sandbox
+    x: 8659705.5
+    y: 70.0
+    z: -3812197.5
+    yaw: -39.681732177734375
+    pitch: 10.350008010864258

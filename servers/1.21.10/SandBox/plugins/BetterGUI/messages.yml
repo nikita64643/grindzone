@@ -1,0 +1,9 @@
+prefix: '&f[&bBetterGUI&f] '
+invalid-number: '&cОшибка! {input} не является числом'
+no-permission: '&cНет прав на это действие'
+menu-not-found: '&cТакого меню не существует'
+player-not-found: '&cИгрок не найден. Возможно, он оффлайн или не заходил на сервер'
+player-only: '&cЭта команда доступна только в игре'
+menu-required: '&cУкажите меню'
+success: '&aУспешно'
+have-met-requirement-placeholder: Да

@@ -1,0 +1,43 @@
+authed:
+  enabled: true
+  fadeIn: 250
+  stay: 4500
+  fadeOut: 250
+  authed_screen:
+    color: GREEN
+    format: NORMAL
+    messages:
+    - Привет, name
+  authed_subtitle:
+    color: YELLOW
+    format: BOLD
+    messages:
+    - Добро пожаловать!
+    - Приятной игры!
+    - Хорошего времяпровождения!
+    - Удачного выживания!
+    - Приятно видеть!
+unauthed:
+  enabled: true
+  unauthed_screen:
+    color: RED
+    format: NORMAL
+    messages:
+    - Привет, name
+  unauthed_subtitle:
+    color: YELLOW
+    format: BOLD
+    messages:
+    - Введите /login <пароль> для входа
+unreg:
+  enabled: true
+  unreg_screen:
+    color: RED
+    format: NORMAL
+    messages:
+    - Привет, name
+  unreg_subtitle:
+    color: YELLOW
+    format: BOLD
+    messages:
+    - Введите /reg <пароль> <повтор> для регистрации

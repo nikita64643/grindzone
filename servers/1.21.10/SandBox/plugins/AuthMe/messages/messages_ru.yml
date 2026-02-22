@@ -1,0 +1,138 @@
+# AuthMe Russian - https://github.com/AuthMe/AuthMeReloaded
+registration:
+  disabled: '&cРегистрация отключена.'
+  name_taken: '&cИгрок с таким никнеймом уже зарегистрирован.'
+  register_request: '&3Авторизация в лобби: введите /reg &a<пароль> <повтор> &3для регистрации или /login &a<пароль> &3для входа'
+  command_usage: '&cИспользование: /reg <пароль> <повтор пароля>'
+  reg_only: '&4Вход только для зарегистрированных! Посетите сайт сервера.'
+  success: '&2Вы успешно зарегистрировались!'
+  kicked_admin_registered: 'Администратор зарегистрировал вас. Авторизуйтесь снова.'
+
+password:
+  match_error: '&cПароли не совпадают.'
+  name_in_password: '&cНельзя использовать свой никнейм в качестве пароля.'
+  unsafe_password: '&cТакой пароль небезопасен.'
+  forbidden_characters: '&4Пароль содержит запрещённые символы. Разрешённые: %valid_chars'
+  wrong_length: '&cПароль слишком длинный/короткий.'
+
+login:
+  command_usage: '&cИспользование: /login <пароль>'
+  wrong_password: '&cНеправильный пароль!'
+  success: '&2Вы успешно вошли!'
+  login_request: '&3Авторизация в лобби: /login &a<пароль> &3или /reg &a<пароль> <повтор>'
+  timeout_error: '&4Время авторизации истекло. Вы исключены с сервера. Попробуйте снова!'
+
+error:
+  denied_command: '&cНеобходимо авторизоваться!'
+  denied_chat: '&cНеобходимо авторизоваться для чата!'
+  unregistered_user: '&cИгрок не зарегистрирован.'
+  not_logged_in: '&cВы ещё не вошли!'
+  no_permission: '&4Недостаточно прав.'
+  unexpected_error: '&cОшибка. Обратитесь к администратору.'
+  max_registration: '&cПревышен лимит регистраций (%reg_count/%max_acc)!'
+  logged_in: '&cВы уже авторизованы!'
+  kick_for_vip: '&3VIP зашёл на полный сервер.'
+  kick_unresolved_hostname: '&cОшибка: неразрешённое имя узла!'
+  tempban_max_logins: '&cВременный бан за неудачные попытки входа.'
+
+antibot:
+  kick_antibot: 'Защита от ботов! Подождите перед входом.'
+  auto_enabled: '&4[AuthMe] AntiBot включён!'
+  auto_disabled: '&2[AuthMe] AntiBot отключён через %m мин.'
+
+unregister:
+  success: '&cУчётная запись удалена!'
+  command_usage: '&cИспользование: /unregister <пароль>'
+
+misc:
+  account_not_activated: '&cАккаунт не активирован. Проверьте почту!'
+  password_changed: '&2Пароль изменён!'
+  logout: '&2Вы вышли.'
+  reload: '&6Конфигурация перезагружена.'
+  usage_change_password: '&cИспользование: /changepassword <пароль> <новый>'
+  accounts_owned_self: 'У вас %count аккаунтов:'
+  accounts_owned_other: 'У игрока %name — %count аккаунтов:'
+
+session:
+  valid_session: '&2Вы авторизованы по сессии!'
+  invalid_session: '&cСессия истекла. Авторизуйтесь снова.'
+
+on_join_validation:
+  same_ip_online: 'Игрок с вашим IP уже на сервере!'
+  same_nick_online: '&4Этот ник уже занят!'
+  name_length: '&4Ник слишком длинный или короткий!'
+  characters_in_name: '&4Ник содержит запрещённые символы. Разрешены: %valid_chars'
+  kick_full_server: '&4Сервер полон!'
+  country_banned: '&4Ваша страна заблокирована!'
+  not_owner_error: 'Вы не владелец аккаунта. Выберите другой ник!'
+  invalid_name_case: 'Используйте ник %valid, а не %invalid.'
+  quick_command: 'Слишком частые команды! Переподключитесь.'
+
+email:
+  add_email_request: '&3Добавьте почту: /email add <почта> <повтор>'
+  usage_email_add: '&cИспользование: /email add <почта> <повтор>'
+  usage_email_change: '&cИспользование: /email change <старая> <новая>'
+  new_email_invalid: '&cНеверный новый адрес!'
+  old_email_invalid: '&cНеверный старый адрес!'
+  invalid: '&cНеверный адрес почты!'
+  added: '&2Почта добавлена!'
+  add_not_allowed: '&cДобавление почты запрещено.'
+  request_confirmation: '&cПодтвердите почту!'
+  changed: '&2Почта изменена!'
+  change_not_allowed: '&cИзменение запрещено.'
+  email_show: '&2Почта: &f%email'
+  no_email_for_account: '&2Почта не привязана.'
+  already_used: '&4Почта уже используется.'
+  incomplete_settings: 'Ошибка настроек почты. Обратитесь к админу.'
+  send_failure: 'Письмо не отправлено. Обратитесь к админу.'
+  change_password_expired: 'Срок смены пароля истёк.'
+  email_cooldown_error: '&cПодождите %time перед новой отправкой.'
+
+recovery:
+  forgot_password_hint: '&3Забыли пароль? /email recovery <почта>'
+  command_usage: '&cИспользование: /email recovery <почта>'
+  email_sent: '&2Письмо с инструкциями отправлено!'
+  code:
+    code_sent: 'Код восстановления отправлен на почту.'
+    incorrect: 'Неверный код! Попыток: %count.'
+    tries_exceeded: 'Слишком много попыток. Используйте /email recovery.'
+    correct: 'Код верный!'
+    change_password: 'Используйте /email setpassword <новый пароль>'
+
+captcha:
+  usage_captcha: '&3Решите капчу: /captcha %captcha_code'
+  wrong_captcha: '&cНеверно! /captcha %captcha_code'
+  valid_captcha: '&2Капча решена!'
+  captcha_for_registration: 'Для регистрации: /captcha %captcha_code'
+  register_captcha_valid: '&2Капча верна! Регистрируйтесь: /reg'
+
+verification:
+  code_required: '&3Подтвердите по почте. Проверьте письмо.'
+  command_usage: '&cИспользование: /verification <код>'
+  incorrect_code: '&cНеверный код из письма.'
+  success: '&2Личность подтверждена!'
+  already_verified: '&2Вы уже подтверждены.'
+  code_expired: '&3Код истёк! Выполните команду для нового.'
+  email_needed: '&3Привяжите почту для подтверждения!'
+
+two_factor:
+  code_created: '&2Код: %code. Отсканируйте: %url'
+  confirmation_required: 'Подтвердите: /2fa confirm <код>'
+  code_required: 'Введите код: /2fa code <код>'
+  already_enabled: '2FA уже включена!'
+  enable_error_no_code: 'Код не сгенерирован. /2fa add'
+  enable_success: '2FA включена!'
+  enable_error_wrong_code: 'Код неверен. /2fa add'
+  not_enabled_error: '2FA не включена. /2fa add'
+  removed_success: '2FA отключена!'
+  invalid_code: 'Неверный код!'
+
+time:
+  second: 'с'
+  seconds: 'с'
+  minute: 'мин'
+  minutes: 'мин'
+  hour: 'ч'
+  hours: 'ч'
+  day: 'дн'
+  days: 'дн'

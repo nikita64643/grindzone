@@ -1,0 +1,93 @@
+# Главное меню сервера — mcMMO, Спавн, Работы, Голосование, Магазин, Рынок
+menu-settings:
+  name: "&6&lМеню сервера"
+  rows: 4
+  command:
+    - menu
+    - servmenu
+  open-action:
+    - "tell: &eОткройте нужный раздел"
+
+default-icon:
+  id: GRAY_STAINED_GLASS_PANE
+  name: " "
+
+# mcMMO — навыки и статистика (GUI через McMmoView)
+mcmmo-button:
+  COMMAND: "mcmmoview open"
+  NAME: "&b&lНавыки mcMMO"
+  LORE:
+    - "&7Открыть меню навыков"
+    - "&7(добыча, бой, рыбалка и др.)"
+  ID: DIAMOND
+  POSITION-X: 2
+  POSITION-Y: 2
+  close-on-click: true
+
+# Телепорт на спавн
+spawn-button:
+  COMMAND: "spawn"
+  NAME: "&a&lСпавн"
+  LORE:
+    - "&7Телепортироваться на спавн"
+  ID: ENDER_PEARL
+  POSITION-X: 4
+  POSITION-Y: 2
+  close-on-click: true
+
+# Работы (UJobs)
+jobs-button:
+  COMMAND: "ujobs"
+  NAME: "&e&lРаботы"
+  LORE:
+    - "&7Открыть меню работ"
+    - "&7(шахтёр, рыбак, лесоруб и др.)"
+  ID: IRON_PICKAXE
+  POSITION-X: 6
+  POSITION-Y: 2
+  close-on-click: true
+
+# Голосование
+vote-button:
+  COMMAND: "votesites"
+  NAME: "&d&lГолосование"
+  LORE:
+    - "&7Голосуйте за сервер"
+    - "&7и получайте награды!"
+  ID: EMERALD
+  POSITION-X: 2
+  POSITION-Y: 3
+  close-on-click: true
+
+# Магазин (DynamicShop — серверный)
+shop-button:
+  COMMAND: "shop"
+  NAME: "&a&lМагазин"
+  LORE:
+    - "&7Купить и продать предметы"
+    - "&7серверу (динамические цены)"
+  ID: CHEST
+  POSITION-X: 4
+  POSITION-Y: 3
+  close-on-click: true
+
+# Рынок (QuickShop — магазины игроков, /qs browse = GUI)
+market-button:
+  COMMAND: "qs browse"
+  NAME: "&6&lРынок"
+  LORE:
+    - "&7Торговля с игроками"
+    - "&7/qs find <предмет> — найти магазин"
+  ID: GOLD_INGOT
+  POSITION-X: 6
+  POSITION-Y: 3
+  close-on-click: true
+
+# Кнопка закрытия
+close-button:
+  ID: BARRIER
+  name: "&cЗакрыть"
+  lore:
+    - "&7Нажмите, чтобы закрыть меню"
+  slot: 35
+  close-on-click: true

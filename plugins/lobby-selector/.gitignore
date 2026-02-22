@@ -1,0 +1,7 @@
+build/
+.gradle/
+libs/
+jdk21/
+jdk21.zip
+*.jar
+!build/libs/*.jar

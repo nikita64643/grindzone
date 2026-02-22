@@ -1,0 +1,77 @@
+signs:
+  top:
+    default:
+      - "&7&m       &r #{POSITION} &7&m       "
+      - "&6{NAME}"
+      - "&e{VALUE} {VALUENAME}"
+      - "&7&m                   "
+no-player-skin:
+  default: Superman00800
+formatted:
+  k: k
+  m: m
+  t: t
+  b: b
+  q: q
+  qi: qi
+  sx: sx
+  sp: sp
+  o: o
+  n: n
+  d: d
+  ud: ud
+time:
+  w: "w "
+  d: "d "
+  h: "h "
+  m: "m "
+  s: s
+noperm: Нет прав на это действие!
+commands:
+  reload:
+    success: "&aКонфиги перезагружены!"
+    fail: "&cОшибка перезагрузки конфигов. Проверьте консоль."
+  export:
+    fileexists: "&cФайл &f{FILE}&c уже существует!"
+    starting: "&7Загрузка игроков из базы. Подождите..."
+    fail: "&cОшибка экспорта. Проверьте консоль."
+    progress: "&eПрогресс: &f{DONE}&7/&f{TOTAL}&7"
+    success: "&aКэш экспортирован в &f{FILE}&a!"
+  viewer:
+    success: |4
+
+            &aКэш загружен, просмотр:&f <hover:show_text:'<yellow>Нажмите, чтобы открыть&f {URL}'><click:open_url:'{URL}'><white><underlined>{URL}</click></hover>
+    uploading: "&7Загрузка.."
+  import:
+    nofile: "&cФайл &f{FILE}&c не найден!"
+    starting: "&7Загрузка кэша из &f{FILE}"
+    fail: "&cОшибка импорта. Проверьте консоль."
+    insertprogress: "&eПрогресс: &f{DONE}&7/&f{TOTAL}&7"
+    success: "&aКэш импортирован из &f{FILE}&a!"
+no-data:
+  lb:
+    name: "---"
+    value: "---"
+  extra: "---"
+  rel:
+    position: "{POSITION}"
+    name: "---"
+    value: "---"
+loading:
+  text: Загрузка
+  short: -?-
+  position: ..
+  size: "..."
+updater:
+  slow-feedback: "&7Проверка обновлений..."
+  disabled: "&cОбновления отключены! Включите в конфиге."
+  success: "&aОбновление загружено! Перезапустите сервер."
+  warnings:
+    could-not-delete-old-jar: "&aОбновление загружено&e, но старый jar не удалён. Удалите его вручную."
+  errors:
+    no-update-available: "&aУ вас последняя версия!"
+    while-checking: "&eОшибка проверки обновлений. См. консоль."
+    already-downloaded: "&aОбновление уже загружено! Перезапустите сервер."
+    while-downloading: "&eОшибка загрузки. См. консоль."
+    unknown: "&eНеизвестная ошибка: {ERROR}"
+    uncaught: "&cОшибка выполнения команды. См. консоль."

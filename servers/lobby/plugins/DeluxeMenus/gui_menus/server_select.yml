@@ -1,0 +1,34 @@
+# GrindZone - выбор сервера и режима
+menu_title: "&6Выбор сервера"
+open_command: servermenu
+register_command: true
+size: 27
+items:
+  "1":
+    material: GOLDEN_APPLE
+    slot: 11
+    display_name: "&a&l1.16.5"
+    lore:
+      - ""
+      - "&7Выживание"
+      - ""
+      - "&aКлик — перейти"
+    click_commands:
+      - "[close]"
+      - "[connect] sandbox165"
+  "2":
+    material: GRASS_BLOCK
+    slot: 15
+    display_name: "&b&l1.21.10"
+    lore:
+      - ""
+      - "&7Выживание"
+      - ""
+      - "&aКлик — перейти"
+    click_commands:
+      - "[close]"
+      - "[connect] sandbox121"
+  "filler":
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [0-10, 12-14, 16-26]
+    display_name: " "

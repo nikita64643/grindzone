@@ -1,0 +1,3 @@
+# AFKZoneRewards: награды в AFK-зоне по привилегиям (Legend 5м, Premium 10м, VIP 15м, Default 20м).
+# Права axafkzone.tier.* задаются в LuckPerms (см. plugins/LuckPerms/prefix-and-color-setup.txt п.8).
+permissions: {}

@@ -1,0 +1,277 @@
+#  █████▒▄▄▄       ██▓     ██▓     ▄▄▄▄    ▄▄▄       ▄████▄   ██ ▄█▀     ██████ ▓█████  ██▀███   ██▒   █▓▓█████  ██▀███
+#▓██   ▒▒████▄    ▓██▒    ▓██▒    ▓█████▄ ▒████▄    ▒██▀ ▀█   ██▄█▒    ▒██    ▒ ▓█   ▀ ▓██ ▒ ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
+#▒████ ░▒██  ▀█▄  ▒██░    ▒██░    ▒██▒ ▄██▒██  ▀█▄  ▒▓█    ▄ ▓███▄░    ░ ▓██▄   ▒███   ▓██ ░▄█ ▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
+#░▓█▒  ░░██▄▄▄▄██ ▒██░    ▒██░    ▒██░█▀  ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄      ▒   ██▒▒▓█  ▄ ▒██▀▀█▄    ▒██ █░░▒▓█  ▄ ▒██▀▀█▄
+#░▒█░    ▓█   ▓██▒░██████▒░██████▒░▓█  ▀█▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄   ▒██████▒▒░▒████▒░██▓ ▒██▒   ▒▀█░  ░▒████▒░██▓ ▒██▒
+# ▒ ░    ▒▒   ▓▒█░░ ▒░▓  ░░ ▒░▓  ░░▒▓███▀▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒   ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒▓ ░▒▓░   ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
+# ░       ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░▒░▒   ░   ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░   ░ ░▒  ░ ░ ░ ░  ░  ░▒ ░ ▒░   ░ ░░   ░ ░  ░  ░▒ ░ ▒░
+# ░ ░     ░   ▒     ░ ░     ░ ░    ░    ░   ░   ▒   ░        ░ ░░ ░    ░  ░  ░     ░     ░░   ░      ░░     ░     ░░   ░
+#             ░  ░    ░  ░    ░  ░ ░            ░  ░░ ░      ░  ░            ░     ░  ░   ░           ░     ░  ░   ░
+#                                       ░           ░                                                ░
+# Made by CandiesJar | Github: github.com/sasi2006166 | Discord: https://discord.gg/dJ8DG2cSzt | Telegram: @CandiesJar
+# Velocity configuration file
+
+# IMPORTANT WARNING: Before reporting any issue on discord, carefully READ the comments!
+# Some features are DISABLED since they're under development, don't report any bugs on them.
+# Thanks for understanding.
+
+settings:
+
+  # Debug mode, useful for bug reports.
+  # Will enable the use for /fs debug command and some
+  debug: false
+
+  # Player with admin permission only will be able to use /fs tab complete.
+  command_tab_complete: true
+
+  # Choose if you want to use a different ping strategy for your lobbies.
+  # DEFAULT: Normal ping strategy, the plugin will ping the server and check if it's online.
+  # SOCKET: This mode will use a socket connection to check if the server is online.
+  # WARNING: Change it only if you're encountering issues.
+  # WARNING 2: Socket mode will not check if your lobbies are full!
+  ping_mode: DEFAULT
+
+  # In seconds, will check your lobbies every X seconds, defined under here.
+  # On first start / reboot, let the plugin settle down for X seconds (defined under here) before starting using fallback.
+  # 2: faster detection of server availability
+  ping_delay: 2
+
+  # In seconds, determines the timeout phase
+  # during the ping check.
+  # If the server doesn't respond in X seconds
+  # defined under here, it will be considered offline.
+  ping_timeout: 2
+
+  # Choose if you want to enable the updater.
+  updater: true
+
+  # Add here your groups with their servers and lobbies.
+  fallback:
+    grindzone:
+      servers:
+        - sandbox165
+        - sandbox121
+      lobbies:
+        - lobby
+      # FALLBACK = при падении sandbox игроки идут в лобби и остаются там (без автопереподключения)
+      mode: FALLBACK
+    default: # DON'T delete this default group.
+      servers:
+        - lobby
+      mode: DEFAULT
+
+  # Disable player kicking if the plugin detects any of listed reasons.
+  # Example: player gets banned on (only) spigot instance using Essentials
+  # FallbackServer will disconnect him instead of kicking.
+  ignored_reasons:
+    - "ban"
+    - "flying"
+    - "whitelist"
+    - "packets"
+    - "full"
+    - "afk"
+    - "maintenance"
+
+  # If you want to use reconnect mode, fallback_mode must be set to RECONNECT.
+  # Those values will clear the chat on reconnecting (after success) or when players
+  # get fallback-ed to another server.
+  clear_chat:
+    fallback: true
+    server_switch: false
+    reconnect: false
+    reconnect_join: true
+
+  # Default is on false to prevent any issues with the first join.
+  # True: the plugin will automatically choose the best lobby when connecting and balance all players.
+  # WARNING: Join will TOTALLY stop working if you didn't set up the balancing group and the groups under it.
+  # WARNING 2: I'll NOT provide any support if you didn't properly configure the plugin.
+  join_balancing: false
+
+  # If join_balancing is set on true, you can choose here the balancing group.
+  # You can find it under the "fallback" section.
+  join_balancing_group: "default"
+
+  # Those are the values for reconnected mode.
+  # Customize titles, delays, and other values here.
+  # Remember that your group has to be set on RECONNECT mode.
+
+  auto_reconnect:
+    # Tries before disconnecting or moving player to the lobby.
+    # 45 попыток × 2 сек ≈ 90 сек — время на запуск Paper 1.21
+    max_tries: 45
+
+    # Time before pinging the server during reconnect phase.
+    # Don't put values under 1, they will NOT work.
+    # 2: faster reconnect attempts (was 5)
+    ping_delay: 2
+
+    # This option is used by the addon ping system
+    # for checking if the spigot instance is fully started up.
+    # WARNING: Change the value only if you're encountering issues.
+    # WARNING 2: Remember to change the value also inside spigot addon.
+    player_count_check: -1
+
+    # With this option, you can teleport players to a physical server
+    # when they're reconnecting. Useful if you want to entertain your players.
+    # WARNING: You need to have the spigot addon installed and configured on 'STANDALONE'.
+    # Лобби вместо виртуального limbo — избегаем бага "unable to connect to FallbackLimbo"
+    physical_reconnect:
+      enabled: true
+      server: "lobby"
+
+    # true = игроки идут в "limbo" при рестарте; physical_reconnect переопределяет на lobby
+    join_limbo: true
+
+    # Customize your limbo server here.
+    # WARNING: Will work only if "join_limbo" is set on true.
+    limbo_settings:
+      name: "FallbackLimbo" # Name of the limbo server, can anything.
+      dimension: "OVERWORLD" # The Dimension of the limbo server can be "NETHER" or "THE_END".
+      gamemode: "ADVENTURE" # GameMode of the limbo server can be "SURVIVAL", "CREATIVE", "ADVENTURE", or "SPECTATOR".
+      schematic:
+        enabled: false
+        name: "limbo.schematic" # Only works if it's enabled.
+        x: 69
+        y: 70
+        z: 69
+      world_time: 5000
+      x: 0
+      y: 100
+      z: 0
+      yaw: 0
+      pitch: 0
+
+    # Time for time-outing the server on ping.
+    # In Milliseconds, 1500 = 1.5 seconds (faster for localhost)
+    ping_timeout: 1500
+
+    # This option will trigger normal FallbackServer kicking procedure.
+    # Sorting players in various lobbies.
+    player_sort: true
+
+    # Time before starting the server pinging on reconnecting.
+    # 5 сек — даём серверу время начать shutdown перед первой проверкой.
+    first_delay: 5
+
+    # Choose if you want to clear the tab-list when
+    # a player enters the "limbo" while reconnecting.
+    # Useful for preventing visual bugs with names.
+    clear_tab-list: true
+
+    # Ignored reasons for reconnecting.
+    # If players get kicked for one of those reasons
+    # they will not be reconnected, instead they will be
+    # disconnected from the proxy itself.
+    ignored_reasons:
+      - "ban"
+      - "flying"
+      - "kick"
+      - "afk"
+      - "outdated"
+      - "whitelist"
+      - "connected"
+      - "full"
+      - "spam"
+      - "packets"
+      - "maintenance"
+
+    # Ignored servers for reconnecting.
+    # If players get kicked from one of those servers,
+    # they will not be reconnected, instead they will be
+    # moved to a fallback lobby.
+    # Add event servers, such as mini-games, here.
+    ignored_servers:
+      - lobby1
+      - lobby2
+      - lobby3
+
+    # Title can be customized into messages.yml
+    title:
+      enable: true
+      # NORMAL: The normal animated title with dots
+      # PULSE: A title that simulates the heartbeat
+      # STATIC: Title will not animate dots
+      # You can customize it in messages.yml
+      mode: NORMAL
+
+  # True: Normal players will not be able to see the /fs output.
+  # False: Everyone will be able to see the simple "running fallbackserver" message.
+  hide_command: false
+
+  # Checks if stats should be enabled -> https://bstats.org/plugin/bungeecord/FallbackServer/11817,
+  # By default, this setting is set on "true" to help me improve the plugin.
+  # You can disable it if you want, feel free to do so.
+  telemetry: true
+
+  # Administrator will be notified which server goes down and the complete reason of shutdown.
+  # DISABLED.
+  admin_notification: true
+
+  # Choose if you want to use fallbackserver's built-in command blocker.
+  command_blocker: true
+
+  # WARNING: will only work if "use_command_blocker" is set on true.
+  # Add here the servers with the command(s) you want to block.
+  # TEMPLATE:
+  # SERVERNAME:
+  #   - COMMAND1
+  #   - COMMAND2
+  command_blocker_list:
+    hack_control:
+      - lobby
+      - hub
+    hack_control_2:
+      - lobby
+      - hub
+
+  # If you want to use the /lobby command.
+  lobby_command: true
+
+  # WARNING: works only if "lobby_command" is set on true.
+  # Aliases for /lobby command, it's possible to remove the base /hub command too.
+  lobby_command_aliases:
+    - hub
+    - lobby
+
+  # Enable server blacklist feature, such for authentication servers.
+  ignored_servers: true
+
+  # WARNING: Works only if "server_blacklist" is set on true.
+  # Add here your pre-lobbies or any server you want to disable.
+  # Kicking will be disabled on those and player will be disconnected.
+  ignored_servers_list:
+    - prelobby1
+
+sub_commands:
+
+  # Enabled: true, will enable the selected sub-command.
+  # Permission: permission required to use the sub-command.
+
+  admin:
+    permission: "fallback.admin"
+
+  reload:
+    permission: "fallback.admin.reload"
+
+  debug:
+    permission: "fallback.admin.debug"
+
+  create:
+    enabled: true
+    permission: "fallback.admin.create"
+
+  add:
+    enabled: true
+    permission: "fallback.admin.add"
+
+  remove:
+    enabled: true
+    permission: "fallback.admin.remove"
+
+  status:
+    enabled: true
+    permission: "fallback.admin.status"
+
+  servers:
+    enabled: true
+    permission: "fallback.admin.servers"

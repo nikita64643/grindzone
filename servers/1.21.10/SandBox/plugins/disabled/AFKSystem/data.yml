@@ -1,0 +1,95 @@
+# #############################################################################################################
+#     .___________.  ______   .__   __.  __  ___  __    __  .__   __.   _______ .__   __. ____    ____       #
+#    |           | /  __  \  |  \ |  | |  |/  / |  |  |  | |  \ |  |  /  _____||  \ |  | \   \  /   /        #
+#    `---|  |----`|  |  |  | |   \|  | |  '  /  |  |  |  | |   \|  | |  |  __  |   \|  |  \   \/   /         #
+#        |  |     |  |  |  | |  . `  | |    <   |  |  |  | |  . `  | |  | |_ | |  . `  |   \_    _/          #
+#        |  |     |  `--'  | |  |\   | |  .  \  |  `--'  | |  |\   | |  |__| | |  |\   |     |  |            #
+#        |__|      \______/  |__| \__| |__|\__\  \______/  |__| \__|  \______| |__| \__|     |__|            #
+#                                                                                                            #
+#                                                                                                            #
+#                  ___                         _                                           _                 #
+#                 (  _`\                      (_ )                                        ( )_               #
+#                 | | ) |   __   _   _    __   | |    _    _ _     ___ ___     __    ___  | ,_)              #
+#                 | | | ) /'__`\( ) ( ) /'__`\ | |  /'_`\ ( '_`\ /' _ ` _ `\ /'__`\/' _ `\| |                #
+#                 | |_) |(  ___/| \_/ |(  ___/ | | ( (_) )| (_) )| ( ) ( ) |(  ___/| ( ) || |_               #
+#                 (____/'`\____)`\___/'`\____)(___)`\___/'| ,__/'(_) (_) (_)`\____)(_) (_)`\__)              #
+#                                                         | |                                                #
+#                                                         (_)                                                #
+#                                                                                                            #
+#                                                                                                            #
+#                                           This Plugin AFKSystem                                            #
+#                                          pls contact TonKoranit FB                                         #
+#                                            Develop by TonKungNY                                            #
+#                                                                                                            #
+# #############################################################################################################
+
+#
+# Text § generator https://www.birdflop.com/resources/rgb/
+#
+
+# ##########################################
+# ------ Customizetion text AFK Zone ------#
+# ##########################################
+
+# 2 type Ex: percent and time (time = живой обратный отсчёт до награды)
+change_type_count: time
+out_region_actionbar: §cВы вне AFK-зоны!
+out_region_in_actionbar: §aВы в AFK-зоне. Ожидайте награду.
+
+afk_title_time: §f<h> ч <m> мин <s> сек до награды
+
+afk_title_percent: §8[<percent>§8]
+afk_title2_percent: §fСкоро награда
+
+success_title_1: §aВы получили AFK-награду!
+success_title_2: §aОтлично!
+
+# ------ Без иконок и скобок (только текст/полоса) ------
+10persen_color: §a
+50persen_color: §e
+more50persen_color: §c
+icon: ''
+old_icon_color: §7
+forward_icon: ''
+backward_icon: ''
+
+# ##########################################
+# ------ Customizetion text Auto AFK ------#
+# ##########################################
+
+auto_afk_time: '900'
+already_afk_message: §cStatis AFK
+title_autoafk_1: §eYour is AFK!
+title_autoafk_2: §aMove to exit the state AFK
+afk_auto_back_location_message: §aYou have left the status AFK The system has brought
+  you back to your original point.
+
+# Admin Command /startafk [playername]
+msg_change_status_afk: '&aYour has change status for <target> to AFK'
+msgto_target_change_status_afk: '&eYour have been set to AFK By <staff>'
+notperms: '&cYou don''t have permission'
+notfound_player: '&cNot Found player <target>'
+
+# Member Commands /startafk
+msg_now_afk: '&aYour is AFK NOW!'
+# ###########################################
+# ------ Saved your Location Auto AFK ------#
+# ###########################################
+
+mainautoafkzone:
+  world: ''
+  x: ''
+  y: ''
+  z: ''
+
+# ###########################################
+# ------ Saved your Location AFK ZONE ------#
+# ###########################################
+
+# Один регион afk — те же точки, что в WorldGuard (regions.yml): min 8659467,62,-3812039 → max 8659518,87,-3811998
+points:
+  afk:
+    point1: world_sandbox,8659467.0,62.0,-3812039.0
+    point2: world_sandbox,8659518.0,87.0,-3811998.0
+    cooldownafk: 1200
+    command: []

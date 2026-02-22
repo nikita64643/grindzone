@@ -1,0 +1,334 @@
+# PlayTimeManager - GUIs Configuration
+# This file contains all customizable text elements for GUIs (will be added more in the future)
+# Hex colors are supported with the following format: &#rrggbb
+# where rr (red), gg (green) and bb (blue) are
+# hexadecimal values between 00 and ff (same as decimal 0-255)
+# Standard minecraft colors and styles are accepted using & format (e.g. "&5&lTest").
+#
+# Internal placeholders used in this file are GUI-DEPENDENT. They can only be used within the specific gui section
+# where they're defined. All available placeholders are shown in this configuration file.
+
+#=================================================================
+#                   JOIN STREAKS REWARDS GUI
+#=================================================================
+
+# Available internal placeholders for this gui: %CURRENT_PAGE%, %TOTAL_PAGES%, %REQUIRED_JOINS%, %JOIN_STREAK_COLOR%,
+# %CURRENT_STREAK%, %DESCRIPTION%, %REWARD_DESCRIPTION%, %COUNT%
+# PlaceholdersAPI support: no
+rewards-gui:
+  gui:
+    title: "Получить награды"
+    border-item-name: "&f[&6Время&eИгры&f]&7"
+
+  pagination:
+    page-indicator: "&e&lСтраница %CURRENT_PAGE% из %TOTAL_PAGES%"
+    next-page:
+      name: "&a&lСледующая →"
+      lore: "&7Нажмите для следующей страницы"
+    prev-page:
+      name: "&a&l← Предыдущая"
+      lore: "&7Нажмите для предыдущей страницы"
+    no-more-pages: "&c&lДальше нет"
+    first-page: "&c&lПервая страница"
+
+  filters:
+    claimed:
+      enabled-name: "&9&l[ ПОЛУЧЕНО ]"
+      disabled-name: "&7Полученные награды"
+      lore-enabled: "&7Просмотр: &9&lполученные награды"
+      lore-disabled: "&7Нажмите, чтобы показать все полученные"
+    available:
+      enabled-name: "&6&l[ ДОСТУПНО ]"
+      disabled-name: "&7Доступные награды"
+      lore-enabled: "&7Просмотр: &6&lдоступные награды"
+      lore-disabled: "&7Нажмите, чтобы увидеть награды"
+    locked:
+      enabled-name: "&4&l[ ЗАБЛОКИРОВАНО ]"
+      disabled-name: "&7Заблокированные награды"
+      lore-enabled: "&7Просмотр: &4&lзаблокированные"
+      lore-disabled: "&7Нажмите, чтобы увидеть будущие"
+
+  claim-all:
+    name: "&e&lЗабрать всё"
+
+  no-rewards:
+    name: "&l&cНет наград!"
+    lore: "&7Попробуйте изменить фильтры"
+
+  reward-items:
+    available:
+      prefix: "&a&l[ДОСТУПНО] "
+      lore:
+        - "&aЭту награду можно забрать!"
+        - "&7Нажмите, чтобы получить"
+    claimed:
+      prefix: "&8&l[ПОЛУЧЕНО] "
+      lore:
+        - "&8Вы уже получили эту награду"
+    locked:
+      prefix: "&c&l[ЗАБЛОКИРОВАНО] "
+      lore:
+        - "&cЕщё не достигли нужного streak"
+
+    info-lore:
+      required-joins: "&7Нужно заходов: &e%REQUIRED_JOINS%"
+      join-streak: "&7Ваш streak: %JOIN_STREAK_COLOR%%CURRENT_STREAK%"
+      join-streak-color:
+        sufficient: "&a"
+        insufficient: "&c"
+      description-separator: ""
+      description: "&7%DESCRIPTION%"
+      reward-description-separator: ""
+      reward-description: "&7%REWARD_DESCRIPTION%"
+
+  messages:
+    no-permission: "&cНет прав на получение наград"
+    not-available: "&cЭту награду нельзя получить"
+    reward-not-found: "&cНе удалось найти награду"
+    error-processing: "&cОшибка при выдаче награды"
+    claimed-rewards: "&aПолучено наград: %COUNT%!"
+    command-spam: "&cПодождите перед повторным использованием"
+
+#=================================================================
+#                      PLAYER STATS GUI
+#=================================================================
+
+# Available internal placeholders: %PLAYER_NAME%, %UUID%, %PLAYTIME%, %ACTUAL_PLAYTIME%, %ARTIFICIAL_PLAYTIME%,
+# %AFK_PLAYTIME%, %FIRST_JOIN_DATE%, %ACCOUNT_AGE%, %LAST_SEEN_DATE%, %TIME_SINCE_LAST_SEEN%, %RELATIVE_STREAK%,
+# %ABSOLUTE_STREAK%, %GOALS_COUNT%, %GOALS_LIST%, %POSITION%
+# PlaceholdersAPI support: yes - You can use whatever PAPI placeholder in this GUI!
+
+# You can use a special item: PLAYER_HEAD. By default, it displays the skin of the stats owner.
+# To show a specific player's skin, use the format PLAYER_HEAD:playername.
+# NOTE: This method is not guaranteed to be 100% reliable, as Mojang's API may occasionally be outdated or unavailable.
+
+# Instructions:
+# - 'views' section defines different GUI configurations based on who is viewing:
+#   * owner: Player viewing their own stats
+#   * player: Player viewing another player's stats
+#   * staff: Staff member viewing stats (requires playtime.others.stats.staff permission)
+# - Each view can have different title, size (9,18,27,36,45,54), and border settings
+# - Items can be enabled/disabled per view using 'enabled: true/false' (defaults to true)
+# - Each item can have different materials, slots, names, and lore per view
+# - Slots can be single value (slot: 1) or multiple values (slot: [1, 2, 3]).
+# - The allowed range for slot values goes from 0 to size-1.
+# - Items under 'items' section are completely customizable - you can add new ones or remove existing ones-
+# - Some items have special settings with unique placeholders: goals-settings.list-format and leaderboard-settings.not-in-leaderboard-position
+#
+# For detailed placeholder descriptions and a complete tutorial on editing this GUI,
+# please visit the wiki: https://github.com/TheGaBr0/PlayTimeManager/wiki
+
+player-stats-gui:
+  goals-settings:
+    # This setting controls how goals are formatted when using the %GOALS_LIST% placeholder
+    list-format: "&7• &e%GOAL% &7(&e%GOAL_COMPLETED_TIMES%)"
+
+  leaderboard-settings:
+    # Fallback message shown when %POSITION% placeholder is used for unranked players
+    not-in-leaderboard-position: "-"
+
+  # View-specific configurations
+  views:
+    owner:
+      title: "&6&lМоя статистика"
+      size: 54
+      border:
+        enabled: true
+        material: "BLUE_STAINED_GLASS_PANE"
+        name: " "
+
+    player:
+      title: "&eСтатистика %PLAYER_NAME%"
+      size: 27
+      border:
+        enabled: true
+        material: "GRAY_STAINED_GLASS_PANE"
+        name: " "
+
+    staff:
+      title: "&c&l&6Статистика %PLAYER_NAME%"
+      size: 54
+      border:
+        enabled: true
+        material: "RED_STAINED_GLASS_PANE"
+        name: "&c&lP.T.M"
+
+  items:
+    playtime:
+      views:
+        owner:
+          enabled: true
+          material: "CLOCK"
+          slot: 22
+          name: "&e&lМоё время игры"
+          lore:
+            - "&7Всего сыграно: &e%PLAYTIME%"
+
+        player:
+          enabled: true
+          material: "CLOCK"
+          slot: 13
+          name: "&e&lВремя игры %PLAYER_NAME%"
+          lore:
+            - "&7Время игры: &e%PLAYTIME%"
+        staff:
+          enabled: true
+          material: "CLOCK"
+          slot: 20
+          name: "&e&lИнформация о времени"
+          lore:
+            - "&7Всего: &e%PLAYTIME%"
+            - "&7Реальное: &a%ACTUAL_PLAYTIME%"
+            - "&7Дополненное: &c%ARTIFICIAL_PLAYTIME%"
+            - "&7AFK: &5%AFK_PLAYTIME%"
+
+    firstjoin:
+      views:
+        owner:
+          enabled: true
+          material: "CAKE"
+          slot: 20
+          name: "&a&lПервый вход"
+          lore:
+            - "&7Вошли: &e%FIRST_JOIN_DATE%"
+            - "&7Возраст аккаунта: &a%ACCOUNT_AGE%"
+        player:
+          enabled: true
+          material: "CAKE"
+          slot: 11
+          name: "&a&lПервый вход %PLAYER_NAME%"
+          lore:
+            - "&7Вошёл: &e%FIRST_JOIN_DATE%"
+            - "&7Возраст аккаунта: &a%ACCOUNT_AGE%"
+        staff:
+          enabled: true
+          material: "CAKE"
+          slot: 22
+          name: "&a&lПервый вход"
+          lore:
+            - "&7Первый вход: &e%FIRST_JOIN_DATE%"
+            - "&7Возраст аккаунта: &a%ACCOUNT_AGE%"
+
+    lastseen:
+      views:
+        owner:
+          enabled: false # Owner doesn't need to see their own "last seen"
+          material: "COMPASS"
+          slot: 21
+          name: "&c&lМоя последняя активность"
+          lore:
+            - "&7Был онлайн: &e%LAST_SEEN_DATE%"
+            - "&7Не в сети: &e%TIME_SINCE_LAST_SEEN%"
+        player:
+          enabled: true
+          material: "COMPASS"
+          slot: 15 # Adjusted for smaller GUI
+          name: "&c&lПоследняя активность"
+          lore:
+            - "&7Был онлайн: &e%LAST_SEEN_DATE%"
+            - "&7Не в сети: &e%TIME_SINCE_LAST_SEEN%"
+        staff:
+          enabled: true
+          material: "COMPASS"
+          slot: 24
+          name: "&c&lПоследняя активность"
+          lore:
+            - "&7Был онлайн: &e%LAST_SEEN_DATE%"
+            - "&7Не в сети: &e%TIME_SINCE_LAST_SEEN%"
+
+    joinstreak:
+      views:
+        owner:
+          enabled: true
+          material: "FIRE_CHARGE"
+          slot: 30
+          name: "&6&lМой streak"
+          lore:
+            - "&7Streak за цикл: &e%RELATIVE_STREAK% дней"
+            - "&7Всего streak: &6%ABSOLUTE_STREAK% дней"
+        player:
+          enabled: true
+          material: "FIRE_CHARGE"
+          slot: 12
+          name: "&6&lStreak %PLAYER_NAME%"
+          lore:
+            - "&7Streak за цикл: &e%RELATIVE_STREAK% дней"
+            - "&7Всего streak: &6%ABSOLUTE_STREAK% дней"
+        staff:
+          enabled: true
+          material: "FIRE_CHARGE"
+          slot: 39
+          name: "&6&lStreak заходов"
+          lore:
+            - "&7Streak за цикл: &e%RELATIVE_STREAK% дней"
+            - "&7Всего streak: &6%ABSOLUTE_STREAK% дней"
+
+    goals:
+      views:
+        owner:
+          enabled: true
+          material: "NETHER_STAR"
+          slot: 32
+          name: "&d&lМои цели"
+          lore:
+            - "&7Выполнено: &e%GOALS_COUNT%"
+            - "&8&m────────────────────"
+            - "%GOALS_LIST%"
+            - "&8&m────────────────────"
+            - "&7Так держать!"
+        player:
+          enabled: true
+          material: "NETHER_STAR"
+          slot: 11
+          name: "&d&lЦели %PLAYER_NAME%"
+          lore:
+            - "&7Выполнено: &e%GOALS_COUNT%"
+            - "&8&m──────────────"
+            - "%GOALS_LIST%"
+        staff:
+          enabled: true
+          material: "NETHER_STAR"
+          slot: 40
+          name: "&d&lВыполненные цели"
+          lore:
+            - "&7Выполнено: &e%GOALS_COUNT%"
+            - "&8&m──────────────"
+            - "%GOALS_LIST%"
+
+    leaderboard:
+      views:
+        owner:
+          enabled: true
+          material: "GOLD_BLOCK"
+          slot: 24
+          name: "&c&lТаблица лидеров"
+          lore:
+            - "&7Моё место: &e%POSITION%"
+        player:
+          enabled: true
+          material: "GOLD_BLOCK"
+          slot: 14
+          name: "&c&lМесто %PLAYER_NAME%"
+          lore:
+            - "&7Место в рейтинге: &e%POSITION%"
+        staff:
+          enabled: true
+          material: "GOLD_BLOCK"
+          slot: 41
+          name: "&c&lТаблица лидеров"
+          lore:
+            - "&7Место в рейтинге: &e%POSITION%"
+    account-overview:
+      views:
+        staff:
+          enabled: true
+          material: "PLAYER_HEAD" #Displays the stats owner's skin. See above for instructions on displaying a specific player's skin.
+          slot: 4
+          name: "&b&lОбзор аккаунта"
+          lore:
+            - "&7UUID: &e%UUID%"
+  messages:
+    no-permission: "&cНет прав на эту команду"
+    no-permission-others: "&cНет прав на просмотр чужих статистик"
+    player-not-found: "&cИгрок не найден"
+    command-spam: "&cПодождите перед повторным использованием"

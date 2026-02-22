@@ -1,0 +1,158 @@
+#  █████▒▄▄▄       ██▓     ██▓     ▄▄▄▄    ▄▄▄       ▄████▄   ██ ▄█▀     ██████ ▓█████  ██▀███   ██▒   █▓▓█████  ██▀███
+#▓██   ▒▒████▄    ▓██▒    ▓██▒    ▓█████▄ ▒████▄    ▒██▀ ▀█   ██▄█▒    ▒██    ▒ ▓█   ▀ ▓██ ▒ ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
+#▒████ ░▒██  ▀█▄  ▒██░    ▒██░    ▒██▒ ▄██▒██  ▀█▄  ▒▓█    ▄ ▓███▄░    ░ ▓██▄   ▒███   ▓██ ░▄█ ▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
+#░▓█▒  ░░██▄▄▄▄██ ▒██░    ▒██░    ▒██░█▀  ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄      ▒   ██▒▒▓█  ▄ ▒██▀▀█▄    ▒██ █░░▒▓█  ▄ ▒██▀▀█▄
+#░▒█░    ▓█   ▓██▒░██████▒░██████▒░▓█  ▀█▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄   ▒██████▒▒░▒████▒░██▓ ▒██▒   ▒▀█░  ░▒████▒░██▓ ▒██▒
+# ▒ ░    ▒▒   ▓▒█░░ ▒░▓  ░░ ▒░▓  ░░▒▓███▀▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒   ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒▓ ░▒▓░   ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
+# ░       ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░▒░▒   ░   ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░   ░ ░▒  ░ ░ ░ ░  ░  ░▒ ░ ▒░   ░ ░░   ░ ░  ░  ░▒ ░ ▒░
+# ░ ░     ░   ▒     ░ ░     ░ ░    ░    ░   ░   ▒   ░        ░ ░░ ░    ░  ░  ░     ░     ░░   ░      ░░     ░     ░░   ░
+#             ░  ░    ░  ░    ░  ░ ░            ░  ░░ ░      ░  ░            ░     ░  ░   ░           ░     ░  ░   ░
+#                                       ░           ░                                                ░
+# Made by CandiesJar | Github: github.com/sasi2006166 | Discord: https://discord.gg/dJ8DG2cSzt | Telegram: @CandiesJar
+# Velocity configuration file
+
+MESSAGES:
+  prefix: "&7&lF&b&lS &8&l» "
+  syntax: "%prefix% &cCorrect syntax: /fs <reload:create:add:remove:status:server>"
+  no_permission: "%prefix% &7I'm sorry, you're lacking permission &c%permission%"
+  reloaded: "%prefix% &7Configuration reloaded &bsuccessfully&7!"
+  only_player: "%prefix% &cOnly players can execute this command!"
+  already_in_hub: "%prefix% &cYou're already connected to a lobby."
+  moved: "%prefix% &7You've been connected to &b%server%"
+  disabled_command: "%prefix% &cSorry, this command is disabled."
+  no_server: "%prefix% &cThere is no lobby available."
+  outdated: "%prefix% &cPlugin configurations are outdated. Please, update the plugin."
+  errors_found: "%prefix% &cErrors found, check /plugins/fallbackservervelocity/logs folder."
+
+  reconnection_failed: "%prefix% &7Переподключение &c&lне удалось&7!"
+  exiting_reconnect: "%prefix% &7Выход из режима переподключения."
+
+  empty_group: "%prefix% &7Please, &cspecify &7a group."
+  server_is_added: "%prefix% &b%server% &7is already inside this list."
+  server_removed: "%prefix% &b%server% &7has been removed from group &b%group%&7."
+  server_not_added: "%prefix% &b%server% &7is not inside this &c%group%&7."
+  server_not_available: "%prefix% &b%server% &7doesn't exist."
+  server_added: "%prefix% &b%server% &7is now added to group &b%group%&7."
+
+  moved_to_lobby:
+    - "&7&m---------------------------------"
+    - ""
+    - "&7You've been moved to &b%server%"
+    - "&7Reason: &b%reason%"
+    - ""
+    - "&7&m---------------------------------"
+
+  new_update:
+    - "&7&m---------------------------------"
+    - "&7New update is available to Fallback Server."
+    - ""
+    - "&7Current version: &c%old_version% &7|| Newest version: &b%new_version%"
+    - "&7&m---------------------------------"
+
+  fallback_command:
+    - "&8&m-----&8[&bFallback Server&8]&m-----"
+    - ""
+    - "&b/fs reload &7| Reloads all configurations."
+    - "&b/fs add <group> <server> &7| Adds a fallback server to configuration."
+    - "&b/fs remove <group> <server> &7| Removes a fallback server from configuration."
+    - "&b/fs status &7| Shows the status of the proxy instance."
+    - "&b/fs servers &7| Shows the status of your lobbies."
+    - ""
+    - "&7Running version &b%version%"
+    - "&8&m---------------------------"
+
+  stats_command:
+    - "&8&m-----&8[&bSTATUS&8]&m-----"
+    - ""
+    - "&7Running version: &b%version%"
+    - "&7Proxy's version: &b%proxy_version%"
+    - "&7CPU Cores: &b%cores%"
+    - "&7Used memory: &b%used_memory% MB"
+    - "&7Total players: &b%total_players%"
+    - ""
+    - "&7Run &b/fs servers &7to get the"
+    - "&7status of your lobbies."
+    - ""
+    - "&8&m---------------------------"
+
+  servers_command:
+    online: "&aONLINE"
+    offline: "&cOFFLINE"
+    maintenance: "&eMAINTENANCE"
+    group: "&7GROUP: &7%group%"
+    servers: "&7%server% &8| &b%status%"
+    header:
+      - "&8&m-----&8[&bSERVERS&8]&m-----"
+      - ""
+    footer:
+      - ""
+      - "&8&m------------------"
+
+  group_command:
+    group_exists: "%prefix% &7Group &b%group% &7already exists."
+    group_not_exists: "%prefix% &7Group &c%group% &7doesn't exist."
+    mode: "%prefix% &7Mode &c%mode% &7doesn't exist."
+    missing_confirm: "%prefix% &7Please, confirm the deletion using &b/fs group delete <group> confirm"
+    parameters:
+      - ""
+      - "&7&m---------------------------------"
+      - "&7Create group: &b/fs group create <group> <mode>"
+      - "&7Modes: &bFALLBACK, RECONNECT"
+      - "&7Group delete: &b/fs group delete <group> confirm"
+      - "&7&m---------------------------------"
+    group_created:
+      - ""
+      - "&7&m---------------------------------"
+      - "&7Group &b%group% &7has been created."
+      - "&7Mode: &b%mode%"
+      - "&7Add your servers using &b/fs add %group% <server>"
+      - "&7And then run /fs reload"
+      - "&7&m---------------------------------"
+    group_deleted:
+      - ""
+      - "&7&m---------------------------------"
+      - "&7Group &b%group% &7has been deleted."
+      - "&7&m---------------------------------"
+
+TITLES: # Everything under this configuration is in seconds.
+  fallback:
+    enabled: true
+    delay: 2
+    fade_in: 1 # Seconds for making title appear
+    fade_out: 1  # Seconds for making title disappear
+    stay: 3 # Stay time of the title
+    fallback_title: "&c&lSERVER CRASHED!"
+    fallback_sub_title: "&7You've been moved to lobby."
+
+  # Reconnect title values are automatic.
+  # You can enable / disable it in config.yml
+  reconnect:
+    reconnect_title: "&6&lПерезагрузка&7%dots%"
+    reconnect_sub_title: "&7Пробую переподключить…"
+    connecting_title: "&e&lПодключение&7%dots%"
+    connecting_sub_title: "&7Ждём ответ от сервера."
+    title_beat: 1 # Used for simulation of heart beat for both reconnect and connecting titles.
+    connected:
+      delay: 3
+      fade_in: 1
+      fade_out: 1
+      stay: 2
+      title: "&a&lПодключено!"
+      sub_title: "&7Ты подключён к &b%server%"
+
+  lobby:
+    enabled: true
+    delay: 2
+    fade_in: 1
+    fade_out: 1
+    stay: 3
+    title: "&a&lConnected to lobby."
+    sub_title: "&7Welcome back!"
+
+  already_in_lobby:
+    enabled: true
+    fade_in: 1
+    fade_out: 1
+    stay: 2
+    title: "&a&lУже в лобби"
+    sub_title: "&7Ты уже здесь."

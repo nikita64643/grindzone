@@ -1,0 +1,77 @@
+# Worlds (huge) - keep datapacks only
+servers/**/world*/
+servers/**/world_*/*
+!servers/**/world_*/datapacks/
+!servers/**/world_*/datapacks/**
+**/session.lock
+
+# Logs and crash reports
+servers/*/logs/
+servers/*/crash-reports/
+*.log
+
+# Plugin jars, zips, libs (downloaded/built separately)
+servers/**/plugins/*.jar
+servers/**/plugins/**/*.jar
+servers/**/plugins/**/*.zip
+servers/**/plugins/**/backup/
+servers/**/plugins/**/lib/
+servers/**/libraries/
+servers/**/libs/
+
+# Server jars, cache, libraries
+servers/*/server.jar
+servers/*/server-*.jar
+servers/*/cache/
+servers/*/libraries/
+servers/**/server.jar
+servers/**/server-*.jar
+servers/**/cache/
+
+# Tools (JDK etc - install separately)
+tools/
+
+# Build outputs
+plugins/*/build/
+plugins/*/.gradle/
+**/node_modules/
+site/vendor/
+
+# Sensitive / runtime
+.env
+.env.*
+!.env.example
+forwarding.secret
+**/ops.json
+**/usercache.json
+**/banned-*.json
+**/whitelist.json
+
+# Paper
+servers/*/.paper-remapped/
+
+# Plugin runtime data (keep configs)
+servers/*/plugins/*/data/
+servers/**/plugins/*/data/
+servers/*/plugins/Essentials/userdata/
+servers/*/plugins/AuthMe/GeoLite2*.mmdb
+servers/**/plugins/*/execution-data/
+servers/**/plugins/**/temp_ds/
+servers/**/plugins/**/advancements/
+servers/**/world_*/advancements/
+servers/**/world_*/playerdata/
+servers/**/world_*/stats/
+lang/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Nested git / build
+scripts/spigot-build/
+scripts/cache/

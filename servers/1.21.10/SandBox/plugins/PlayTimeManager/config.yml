@@ -1,0 +1,202 @@
+# ██████╗ ██╗      █████╗ ██╗   ██╗████████╗██╗███╗   ███╗███████╗
+# ██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝╚══██╔══╝██║████╗ ████║██╔════╝
+# ██████╔╝██║     ███████║ ╚████╔╝    ██║   ██║██╔████╔██║█████╗
+# ██╔═══╝ ██║     ██╔══██║  ╚██╔╝     ██║   ██║██║╚██╔╝██║██╔══╝
+# ██║     ███████╗██║  ██║   ██║      ██║   ██║██║ ╚═╝ ██║███████╗
+# ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝╚═╝     ╚═╝╚══════╝
+# ███╗   ███╗ █████╗ ███╗   ██╗ █████╗  ██████╗ ███████╗██████╗
+# ████╗ ████║██╔══██╗████╗  ██║██╔══██╗██╔════╝ ██╔════╝██╔══██╗
+# ██╔████╔██║███████║██╔██╗ ██║███████║██║  ███╗█████╗  ██████╔╝
+# ██║╚██╔╝██║██╔══██║██║╚██╗██║██╔══██║██║   ██║██╔══╝  ██╔══██╗
+# ██║ ╚═╝ ██║██║  ██║██║ ╚████║██║  ██║╚██████╔╝███████╗██║  ██║
+# ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
+
+#=================================================================
+#                       GENERAL INFORMATION
+#=================================================================
+#If you are looking for goals settings, please head to the "Goals" folder
+#If you are looking for rewards settings, please head to the "Rewards" folder
+
+# Hex colors are supported with the following format: &#rrggbb
+# where rr (red), gg (green) and bb (blue) are
+# hexadecimal values between 00 and ff (same as decimal 0-255)
+# Standard minecraft colors and styles are accepted using & format (e.g. "&5&lTest").
+
+#Leave this untouched
+config-version: 4.2
+
+#Choose your permissions management plugin
+#Available options: "luckperms"
+#Using a different permissions plugin? Let me know on my GitHub issues page!
+permissions-manager-plugin: "luckperms"
+
+# Define the format for displaying dates and times (both for commands and placeholders)
+# Want a different format? You can create your own here: http://www.sdfonlinetester.info/
+datetime-format: "MMM dd, yyyy HH:mm:ss"
+
+# Define how many days a month is equal to. This field is used by all playtime formats that include months.
+month-value-in-days: 30
+
+# Check for plugin updates on server startup
+# Leaving this to true is recommended, keeping the plugin updated ensures you have
+# the latest bug fixes and performance improvements.
+# It is especially useful for old releases of PlayTimeManager
+# that can't be upgraded anymore due to drop of support for older Minecraft versions.
+#
+# You need to restart the server for this action to take effect.
+check-for-updates: true
+
+#=================================================================
+#                            DATABASE
+#=================================================================
+
+#Leave this untouched
+migrating-to: "none"
+
+# Database type to use for storing player data
+# Available options: "sqlite", "mysql", "mariadb", "postgresql"
+# SQLite is recommended for small to medium servers (uses local file storage)
+# MySQL/MariaDB and PostgreSQL are recommended for larger servers or networked setups
+database-type: "sqlite"
+
+# MySQL/MariaDB specific settings
+mysql:
+  # Database connection details
+  host: "localhost"
+  port: 3306
+  database: "playtime_manager"
+  username: "root"
+  password: "your_password_here"
+
+  # Use SSL/TLS for secure connection
+  use-ssl: false
+
+  # Additional connection properties (optional)
+  # These will be appended to the JDBC connection URL
+  # Example: "useUnicode=true&characterEncoding=utf8"
+  connection-properties: ""
+
+# PostgreSQL specific settings
+postgresql:
+  # Database connection details
+  host: "localhost"
+  port: 5432
+  database: "playtime_manager"
+  username: "postgres"
+  password: "your_password_here"
+
+  # Schema to use (optional, defaults to 'public')
+  schema: "public"
+
+  # Use SSL/TLS for secure connection
+  use-ssl: false
+
+  # Additional connection properties (optional)
+  # These will be appended to the JDBC connection URL
+  # Example: "useUnicode=true&characterEncoding=utf8"
+  connection-properties: ""
+
+# Enable debug logging for database operations
+# Shows SQL queries and connection information in console
+# Recommended for troubleshooting connection issues
+database-debug: false
+
+#=================================================================
+#                          AFK DETECTION
+#=================================================================
+
+# Choose your afk detection plugin
+# Available options: "none", "essentials", "purpur", "antiafkplus", "jetsantiafkpro"
+# If you want to use Purpur base afk detection, you need to:
+# - Set player-idle-timeout field greater than 0 (minutes) in server.properties
+# - Set player.idle-timeout.kick-if-idle field to false in purpur.yml
+# The purpur option works for Leaf and LightSpigot servers as well.
+#
+#Using a different afk detection system? Let me know on my GitHub issues page!
+afk-detection-plugin: "none"
+
+# When enabled, AFK time is excluded from total playtime calculations used throughout
+# the plugin (goals requirements, displays, etc.). AFK time tracking continues
+# regardless of this setting when afk-detection-plugin is loaded and correctly working.
+ignore-afk-time: false
+
+#=================================================================
+#                           JOIN STREAKS
+#=================================================================
+
+#Define when the interval resets (in cron format)
+#Format: <seconds> <minute> <hour> <day-of-month> <month> <day-of-week>
+#I know it may seem a little difficult to understand, but it's very powerful and highly customizable.
+#I suggest you to use this website if you need help: https://www.freeformatter.com/cron-expression-generator-quartz.html
+#Also, ChatGPT is very useful in these cases :), use the keyword 'quartz cron format'
+#Examples:
+# "0 0 0 * * ?" - Daily at midnight (00:00) -> Use this if you want to implement rewards based on daily logins.
+# "0 0 6 * * ?" - Daily at 6 AM
+# "0 0 12 * * ?" - Daily at noon (12 PM)
+# "0 0 0 ? * MON" - Weekly on Monday at midnight
+# "0 0 0 1 * ?" - Monthly on the 1st at midnight
+# "0/30 * * ? * *" - Every 30 seconds
+streak-reset-schedule: "0 0 0 * * ?"
+
+#Whether to use server timezone or UTC for cron scheduling
+#Values: "server" or "utc"
+reset-schedule-timezone: "server"
+
+#If set to false the plugin will stop granting rewards, but will still continue to track players' join streaks
+#Useful for maintenance of the rewards
+rewards-check-schedule-activation: true
+
+#Enable or disable debug logging in the console
+#I suggest you to keep this true if you are experimenting with cron expressions defined above
+#Default: false
+streak-check-verbose: false
+
+# Enables or disables the reset of the join streak.
+reset-joinstreak:
+  enabled: true
+  # Number of missed joins allowed before the streak is reset. If this is set to a value <=0 it will be considered as 1.
+  missed-joins: 1
+
+#Message shown to players who earn a login streak reward but need to claim it manually
+#This appears when a player without the auto-claim permission (playtime.joinstreak.claim.automatic) qualifies for a reward
+# %REQUIRED_JOINS% - Required joins to achieve the reward
+# %PLAYER_NAME% - Player's username
+join-warn-claim-message:
+  "[&6PlayTime&eManager&f]&7 Отлично, &e%PLAYER_NAME%&7! Вы заходили &6%REQUIRED_JOINS%&7 раз подряд
+  и разблокировали награду! Используйте &e/claimrewards&7, чтобы её забрать!"
+
+# The opposite of 'join-warn-claim-message' field
+join-warn-autoclaim-message:
+  "[&6PlayTime&eManager&f]&7 Отлично, &e%PLAYER_NAME%&7! Вы заходили &6%REQUIRED_JOINS%&7 раз подряд
+  и разблокировали награду! Она получена автоматически!"
+
+# Message shown to players who qualify for a reward but won't receive it because
+# they didn't claim the previous reward cycle
+# %REQUIRED_JOINS% - Required joins to achieve the reward
+# %PLAYER_NAME% - Player's username
+join-unclaimed-previous-message:
+  "[&6PlayTime&eManager&f]&7 &e%PLAYER_NAME%&7, вы заходили &6%REQUIRED_JOINS%&7 раз подряд,
+  но не забрали прошлую награду! Используйте &e/claimrewards&7, чтобы забрать ожидающие
+  награды перед получением новых."
+
+#=================================================================
+#                           PLACEHOLDERS
+#=================================================================
+
+placeholders:
+  #If enabled, errors in placeholders will be displayed
+  #If disabled, the text in 'default-message' will be shown instead of error messages
+  enable-errors: false
+  #The default message to display when 'enable-errors' is set to false
+  default-message: "No data"
+  #The message displayed when %PTM_rank% is called but the target player isn't in the leaderboard.
+  not-in-leaderboard-message: "-"
+  # List of players who should be excluded from appearing in the playtime leaderboard
+  # This is useful for hiding staff members, test accounts, or other players you don't want displayed
+  # Players can also be dynamically added or removed from the leaderboard using the command:
+  # /playtimeattribute <player> hidefromleaderboard
+  # To manually add entries, remove "[]" and list your names as the example below.
+  # Example:
+  # - "TestAccount"
+  # - "StaffMember"
+  playtime-leaderboard-blacklist: []

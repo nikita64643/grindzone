@@ -1,0 +1,7 @@
+name: LobbySelector
+version: "1.0"
+main: grindzone.lobby.LobbySelectorPlugin
+api-version: "1.21"
+commands:
+  cleanvillagers:
+    description: Удалить лишних жителей, оставить одного меню-жителя

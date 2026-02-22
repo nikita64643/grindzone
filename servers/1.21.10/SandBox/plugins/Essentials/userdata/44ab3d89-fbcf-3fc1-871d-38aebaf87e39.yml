@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 192.168.0.100
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1771751353753
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1771751397288
+  login: 1771751303740
+money: '0'
+last-account-name: MeowMeow4800
+lastlocation:
+  world: a2f3b4f2-1526-4752-b5a1-42f750d69b00
+  world-name: world_sandbox
+  x: 8659657.468219606
+  y: 86.0
+  z: -3812208.278774079
+  yaw: -22.132089614868164
+  pitch: 9.150040626525879
+logoutlocation:
+  world: a2f3b4f2-1526-4752-b5a1-42f750d69b00
+  world-name: world_sandbox
+  x: -0.14570782986386963
+  y: 80.0
+  z: -0.269692512189983
+  yaw: 146.9190216064453
+  pitch: 16.94999122619629

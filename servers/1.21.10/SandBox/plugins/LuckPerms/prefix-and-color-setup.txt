@@ -1,0 +1,49 @@
+# Ручная настройка префиксов и прав (если кнопка в админке не сработала)
+# Выполняйте в КОНСОЛИ сервера (не в чате игры). Без слэша в начале.
+
+# 1. Создать группы (если ещё нет)
+lp creategroup vip
+lp creategroup premium
+lp creategroup legend
+
+# 2. Веса групп (чтобы основная группа была vip/premium/legend, а не default — иначе префикс "нет")
+lp group vip setweight 10
+lp group premium setweight 20
+lp group legend setweight 30
+
+# 3. Установить префиксы (setprefix: приоритет затем текст; при нескольких группах выше приоритет — выше ранг)
+lp group vip meta setprefix 100 "&a[VIP] &f"
+lp group premium meta setprefix 200 "&6[Premium] &f"
+lp group legend meta setprefix 300 "&d[Legend] &f"
+
+# 4. Выдать права на цвет в чате (и полный доступ к чат-правам)
+# Игроки с этими правами пишут в чат с кодами: &a зелёный, &c красный, &e жёлтый и т.д. (не команда /color)
+lp group vip permission set essentials.chat.color true
+lp group vip permission set essentials.chat.format true
+lp group vip permission set essentials.chat.* true
+lp group premium permission set essentials.chat.color true
+lp group premium permission set essentials.chat.format true
+lp group premium permission set essentials.chat.* true
+lp group legend permission set essentials.chat.color true
+lp group legend permission set essentials.chat.format true
+lp group legend permission set essentials.chat.* true
+
+# 5. Проверка: префикс группы
+lp group vip meta info
+
+# 6. Проверка: игрок — основная группа должна быть premium/vip/legend, префикс не "нет"
+lp user <никнейм> info
+
+# 7. Выдать группу игроку вручную (если нужно)
+lp user <никнейм> parent add vip
+
+# 8. AFK-зона: интервалы награды по привилегиям (AFKZoneRewards)
+# Legend 5 мин, Premium 10 мин, VIP 15 мин, Default 20 мин
+lp group legend permission set axafkzone.tier.legend true
+lp group premium permission set axafkzone.tier.premium true
+lp group vip permission set axafkzone.tier.vip true
+lp group default permission set axafkzone.tier.default true
+
+# 9. warp afk — только для админов (игроки используют /afk)
+lp group admin permission set essentials.warp.afk true
+lp group owner permission set essentials.warp.afk true

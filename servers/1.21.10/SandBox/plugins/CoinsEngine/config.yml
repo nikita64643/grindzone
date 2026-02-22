@@ -1,0 +1,55 @@
+General:
+  # Sets whether to apply PlaceholderAPI placeholders for currency 'Format' setting.
+  # Allows you to use custom images from Oraxen or ItemsAdder, as well as any other player unrelated placeholders.
+  PlaceholderAPI_For_Currency_Format: true
+Integration:
+  Vault:
+    # Controls whether Vault integration is enabled.
+    # https://nightexpressdev.com/coinsengine/hooks/vault
+    Enabled: true
+    # Sets a currency used as primary sever economy using the Vault API.
+    EconomyCurrency: money
+Top:
+  # Controls whether Tops feature is enabled.
+  # [*] This feature is required for the 'server balance' placeholders to work.
+  # https://nightexpressdev.com/coinsengine/features/leaderboards
+  Enabled: true
+  # Controls whether GUI is preferred to display balance leaderboard.
+  # [*] Disable if you want it be text only.
+  Use_GUI: true
+  # Sets how many entries displayed per page for currency top commands.
+  # [*] Works only for text leaderboards. GUI settings available in the '/menu/' directory.
+  Entries_Per_Page: 10
+  # Sets update interval (in seconds) for currency top balance lists.
+  # [Asynchronous]
+  # [Default is 900 (15 minutes)]
+  Update_Interval: 900
+Currency:
+  Prefix:
+    # Controls whether or not currency messages will use custom prefix instead of the plugin's one.
+    # https://nightexpressdev.com/coinsengine/features/prefix
+    Enabled: true
+    # Sets custom prefix format for currency messages.
+    # You can use 'Currency' placeholders: https://nightexpressdev.com/coinsengine/placeholders/internal
+    Format: <soft_yellow><b>%currency_prefix%</b></soft_yellow><dark_gray> » </dark_gray>
+Wallet:
+  # Controls whether Wallet feature is enabled.
+  # https://nightexpressdev.com/coinsengine/features/wallet
+  Enabled: true
+  # Command aliases for the Wallet feature.
+  Command_Aliases: wallet
+Migration:
+  # Controls whether Migration feature is available.
+  # Disable if you don't plan to migrate from other plugins to save some RAM.
+  # https://nightexpressdev.com/coinsengine/features/migration
+  Enabled: true
+Logs:
+  Enabled:
+    # Controls whether currency operations will be logged to console.
+    Console: false
+    # Controls whether currency operations will be logged to a file.
+    File: true
+  # Logs date format.
+  DateFormat: dd/MM/yyyy HH:mm:ss
+  # Controls how often currency operations writes to the log file.
+  Write_Interval: 5

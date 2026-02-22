@@ -1,0 +1,5 @@
+example:
+  commands:
+    on_template_apply:
+      - say --range 15 Hello!
+      - npc command add say Hello again!

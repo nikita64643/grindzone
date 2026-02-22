@@ -1,0 +1,12 @@
+name: AFKZoneRewards
+version: "1.0"
+main: grindzone.afkzone.AFKZoneRewardsPlugin
+api-version: "1.21"
+description: AFK-зона с наградами по привилегиям (Legend 5м, Premium 10м, VIP 15м, Default 20м)
+loadbefore:
+  - CoinsEngine
+softdepend:
+  - PlaceholderAPI
+commands:
+  afk:
+    description: Телепорт в AFK-зону для получения монет

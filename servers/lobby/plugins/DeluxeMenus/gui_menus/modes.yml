@@ -1,0 +1,24 @@
+# GrindZone - выбор режима
+menu_title: "&6Режимы"
+open_command: menu
+register_command: true
+size: 27
+
+items:
+  "oneblock":
+    material: GRASS_BLOCK
+    slot: 13
+    display_name: "&a&lВЫЖИВАНИЕ"
+    lore:
+      - ""
+      - "&7Выберите версию сервера"
+      - ""
+      - "&aКлик — открыть выбор сервера"
+    click_commands:
+      - "[openguimenu] server_select"
+
+  "filler":
+    material: GRAY_STAINED_GLASS_PANE
+    slots: [0-12, 14-26]
+    display_name: " "
+

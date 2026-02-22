@@ -1,0 +1,101 @@
+header-footer:
+  enabled: true
+  designs:
+    default:
+      header:
+      - '&6&lGrindZone'
+      - '&7&lЛОББИ'
+      - '&7Онлайн: &f%online%'
+      - ''
+      footer:
+      - ''
+      - '&7Версия: &f1.16.5 / 1.21.10'
+tablist-name-formatting:
+  enabled: true
+  disable-condition: '%world%=__disabled__'
+scoreboard-teams:
+  enabled: true
+  enable-collision: true
+  invisible-nametags: false
+  disable-condition: '%world%=__disabled__'
+  sorting-types:
+  - PLACEHOLDER_A_TO_Z:%player%
+  case-sensitive-sorting: true
+  can-see-friendly-invisibles: false
+playerlist-objective:
+  enabled: false
+  disable-condition: '%world%=__disabled__'
+  title: TAB
+  value: ''
+  render-type: INTEGER
+belowname-objective:
+  enabled: false
+  fancy-value-default: NPC
+  fancy-value: '&c%health%'
+bossbar:
+  enabled: false
+scoreboard:
+  enabled: true
+  toggle-command: /sb
+  remember-toggle-choice: false
+  hidden-by-default: false
+  delay-on-join-milliseconds: 0
+  scoreboards:
+    lobby:
+      title: '&6&lGrindZone'
+      lines:
+      - '&7Лобби'
+      - ''
+      - '&7Онлайн: &f%online%'
+      - ''
+      - '&7Сервера:'
+      - '&a- 1.16.5'
+      - '&b- 1.21.10'
+      - ''
+      - '&7НПС справа/слева'
+      - '&7для входа в режим'
+layout:
+  enabled: false
+global-playerlist:
+  enabled: false
+  update-latency: false
+placeholders:
+  date-format: dd.MM.yyyy
+  time-format: HH:mm:ss
+  time-offset: 0
+  register-tab-expansion: false
+placeholder-refresh-intervals:
+  default-refresh-interval: 500
+assign-groups-by-permissions: false
+permission-refresh-interval: 1000
+debug: false
+mysql:
+  enabled: false
+proxy-support:
+  enabled: true
+  channel-name-suffix: TAB
+  type: PLUGIN
+  plugin:
+    name: RedisBungee
+  redis:
+    url: redis://:password@localhost:6379/0
+  rabbitmq:
+    exchange: plugin
+    url: amqp://guest:guest@localhost:5672/%2F
+components:
+  minimessage-support: true
+  disable-shadow-for-heads: true
+config-version: 5
+prevent-spectator-effect:
+  enabled: false
+use-online-uuid-in-tablist: true
+compensate-for-packetevents-bug: false
+primary-group-finding-list:
+- Owner
+- Admin
+- Helper
+- default
+per-world-playerlist:
+  enabled: false
+ping-spoof:
+  enabled: false

@@ -1,0 +1,21 @@
+location: world_lobby:0.5:10.0:12.5
+enabled: true
+display-range: 64
+update-range: 64
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+  - lines:
+      - content: "&8■ &e&lНАЧАТЬ ИГРАТЬ &8■"
+        height: 0.3
+        offsetX: 0.0
+        offsetZ: 0.0
+      - content: "&7Забегай в портал, чтобы"
+        height: 0.3
+        offsetX: 0.0
+        offsetZ: 0.0
+      - content: "&7начать свое приключение!"
+        height: 0.3
+        offsetX: 0.0
+        offsetZ: 0.0

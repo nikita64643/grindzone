@@ -1,0 +1,23 @@
+{
+  "id": "4c2329c8-8c16-4c6b-b39f-655fc7cd4f9d",
+  "name": "lobby_cleanup_old_json_online_line",
+  "commands": [
+    {
+      "command": "minecraft:execute in minecraft:overworld as @a at @s run minecraft:kill @e[type=minecraft:armor_stand,distance=..64,nbt={CustomNameVisible:1b}]",
+      "gender": "CONSOLE"
+    }
+  ],
+  "interval": { "days": 0, "hours": 0, "minutes": 0, "seconds": 2 },
+  "times": [],
+  "random": 1.0,
+  "days": ["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY","SUNDAY"],
+  "executionLimit": -1,
+  "commandExecutionMode": "ALL",
+  "commandExecutionInterval": { "days": 0, "hours": 0, "minutes": 0, "seconds": 1 },
+  "active": true,
+  "resetExecutionsAfterRestart": false,
+  "condition": { "conditionType": "AND", "conditions": [] },
+  "events": [],
+  "configVersion": 1
+}
+

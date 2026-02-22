@@ -1,0 +1,22 @@
+# ItemJoin - Lobby compass menu
+items-Version: 8
+items-Delay: 1
+items-Overwrite: true
+items-Spamming: false
+items-RestrictCount: true
+
+items:
+  lobby-menu:
+    id: COMPASS
+    slot: 0
+    count: 1
+    name: '&a&lМЕНЮ РЕЖИМОВ'
+    lore:
+      - '&7ПКМ — открыть меню'
+    interact-right:
+      - 'player: menu'
+    commands-cooldown: 1
+    itemflags: inventory-modify, death-drops, self-drops, hide-flags, CreativeBypass
+    triggers: join, respawn, world-switch
+    enabled-worlds: world_lobby
+

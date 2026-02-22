@@ -1,0 +1,67 @@
+{
+  "id": "f79f2d8a-8c7f-4cf5-90a2-7b0e1189e8f0",
+  "name": "lobby_weather",
+  "commands": [
+    {
+      "command": "execute in minecraft:overworld run minecraft:gamerule sendCommandFeedback false",
+      "gender": "CONSOLE"
+    },
+    {
+      "command": "execute in minecraft:overworld run minecraft:gamerule doWeatherCycle false",
+      "gender": "CONSOLE"
+    },
+    {
+      "command": "execute in minecraft:overworld run minecraft:weather clear 1000000",
+      "gender": "CONSOLE"
+    },
+    {
+      "command": "execute in minecraft:overworld run minecraft:gamerule fallDamage false",
+      "gender": "CONSOLE"
+    },
+    {
+      "command": "execute in minecraft:overworld run minecraft:gamerule fireDamage false",
+      "gender": "CONSOLE"
+    },
+    {
+      "command": "execute in minecraft:overworld run minecraft:gamerule drowningDamage false",
+      "gender": "CONSOLE"
+    },
+    {
+      "command": "execute in minecraft:overworld run minecraft:gamerule freezeDamage false",
+      "gender": "CONSOLE"
+    }
+  ],
+  "interval": {
+    "days": 0,
+    "hours": 0,
+    "minutes": 0,
+    "seconds": 10
+  },
+  "times": [],
+  "random": 1.0,
+  "days": [
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY",
+    "SATURDAY",
+    "SUNDAY"
+  ],
+  "executionLimit": -1,
+  "commandExecutionMode": "ALL",
+  "commandExecutionInterval": {
+    "days": 0,
+    "hours": 0,
+    "minutes": 0,
+    "seconds": 1
+  },
+  "active": true,
+  "resetExecutionsAfterRestart": false,
+  "condition": {
+    "conditionType": "AND",
+    "conditions": []
+  },
+  "events": [],
+  "configVersion": 1
+}

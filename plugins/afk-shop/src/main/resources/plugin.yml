@@ -1,0 +1,11 @@
+name: AFKShop
+version: "1.0"
+main: grindzone.afkshop.AFKShopPlugin
+api-version: "1.21"
+description: Магазин за AFK-монеты
+softdepend:
+  - CoinsEngine
+commands:
+  afkshop:
+    description: Открыть магазин за AFK-монеты
+    aliases: [afs]

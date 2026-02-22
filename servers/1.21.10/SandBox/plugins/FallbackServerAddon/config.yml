@@ -1,0 +1,129 @@
+#  █████▒▄▄▄       ██▓     ██▓     ▄▄▄▄    ▄▄▄       ▄████▄   ██ ▄█▀     ██████ ▓█████  ██▀███   ██▒   █▓▓█████  ██▀███
+#▓██   ▒▒████▄    ▓██▒    ▓██▒    ▓█████▄ ▒████▄    ▒██▀ ▀█   ██▄█▒    ▒██    ▒ ▓█   ▀ ▓██ ▒ ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
+#▒████ ░▒██  ▀█▄  ▒██░    ▒██░    ▒██▒ ▄██▒██  ▀█▄  ▒▓█    ▄ ▓███▄░    ░ ▓██▄   ▒███   ▓██ ░▄█ ▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
+#░▓█▒  ░░██▄▄▄▄██ ▒██░    ▒██░    ▒██░█▀  ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄      ▒   ██▒▒▓█  ▄ ▒██▀▀█▄    ▒██ █░░▒▓█  ▄ ▒██▀▀█▄
+#░▒█░    ▓█   ▓██▒░██████▒░██████▒░▓█  ▀█▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄   ▒██████▒▒░▒████▒░██▓ ▒██▒   ▒▀█░  ░▒████▒░██▓ ▒██▒
+# ▒ ░    ▒▒   ▓▒█░░ ▒░▓  ░░ ▒░▓  ░░▒▓███▀▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒   ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒▓ ░▒▓░   ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
+# ░       ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░▒░▒   ░   ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░   ░ ░▒  ░ ░ ░ ░  ░  ░▒ ░ ▒░   ░ ░░   ░ ░  ░  ░▒ ░ ▒░
+# ░ ░     ░   ▒     ░ ░     ░ ░    ░    ░   ░   ▒   ░        ░ ░░ ░    ░  ░  ░     ░     ░░   ░      ░░     ░     ░░   ░
+#             ░  ░    ░  ░    ░  ░ ░            ░  ░░ ░      ░  ░            ░     ░  ░   ░           ░     ░  ░   ░
+#                                       ░           ░                                                ░
+# Made by CandiesJar | GitHub: github.com/sasi2006166 | Discord: https://discord.gg/dJ8DG2cSzt | Telegram: @CandiesJar
+# Addon configuration file
+
+settings:
+  
+  # Here you can set up FallbackServer's addon.
+  # If you want to use this addon normally, you need to set the mode to 'ADDON'.
+  # If you want to use this addon as Reconnect Server, you need to set the mode to 'STANDALONE'.
+  mode: NONE
+  
+  # Here you can set up the plugin reload's permission and message.
+  reload_permission: fallbackserver.reload
+  reload_message: '&7&lF&b&lS &8&l» &b&nFallback Server Addon %version%&r&7 reloaded
+    successfully.'
+  
+  # true: Normal players will not be able to see the /fsa output.
+  # false: Everyone will be able to see the simple "running fallbackserver" message.
+  hide_command: false
+  
+  # Support for faster addon methods using ProtocolLib.
+  # If you enable this, the plugin will use ProtocolLib for some features.
+  # The plugin will use ProtocolLib to handle server crashes (without it, you can't save your players from crashes).
+  # Requires ProtocolLib to be installed.
+  protocollib_support: true
+  
+  # Support for faster addon methods using PacketEvents.
+  # If you enable this, the plugin will use PacketEvents to send ping packets.
+  # The plugin will use PacketEvents to handle server crashes (without it, you can't save your players from crashes).
+  # Requires PacketEvents to be installed.
+  packetevents_support: true
+  
+  # NOTE: This will work only if you set up the mode to 'ADDON'.
+  addon:
+    
+    # If you enable this, the plugin will automatically shutdown itself when the work is done.
+    # It's normal if you see the plugin shutting down itself and is showing red in plugin's list.
+    auto_remove: false
+    
+    # NOTE: This shouldn't be changed unless you know what you're doing.
+    # This changes the number that the main fallbackserver plugin uses to check if the server is fully started.
+    # If you change this, you will need to change the fallbackserver plugin's config as well.
+    override_player_count_number: -1
+    
+    # NOTE: This shouldn't be changed unless you know what you're doing.
+    # The plugin will try to establish a secure connection with the Proxy only when all plugins are loaded into the server.
+    # This value indicates the maximum number of checks to be performed to check whether the plugins are all started.
+    # After that, the plugin will try to work anyway.
+    max_start_tries: 3
+    
+    # NOTE: This shouldn't be changed unless you know what you're doing.
+    # This changes the time (in seconds) to disable the addon after the server is started.
+    # If you are having problems with fallbackserver (in reconnect), you could increase this value.
+    disable_after: 30
+  
+  # NOTE: This will work only if you set up the mode to 'STANDALONE'.
+  standalone:
+    
+    # When a player joins the server, the plugin will automatically teleport him to the world spawn (/setworldspawn).
+    teleport_worldspawn: true
+    
+    # Accepted values: "SURVIVAL", "CREATIVE", "ADVENTURE", "SPECTATOR", "NONE".
+    join_gamemode: ADVENTURE
+    
+    # Depends on your server version! (Set "NONE" to disable this feature.)
+    # You can choose between values based on this link: https://shorturl.at/mZRL4
+    # 1.9 sounds are valid also for all updated versions.
+    join_sound: NONE
+    
+    # You can block some events here, to prevent players from doing something during the reconnect.
+    event_blocker:
+      
+      entity_spawn: true
+      damage: true
+      block_break: true
+      block_place: true
+      hunger: true
+      item_drop: true
+      item_pickup: true
+      interact: true
+      pvp: true
+      chat: false
+      move: false
+      command: true
+      weather_cycle: true
+    
+    # NOTE: If you want to disable the join/quit messages, set the values to "none".
+    join_message: '&7[&a+&7] %player_name%'
+    quit_message: '&7[&c-&7] %player_name%'
+    
+    # You can set up the scoreboard here, you can use color codes and placeholders, hex colors are supported.
+    scoreboard:
+      enabled: true
+      update_interval: 20
+      title: '&c&lRECONNECTING'
+      lines:
+      - ''
+      - '&7The server suddenly'
+      - '&7went &c&ldown&7.'
+      - ''
+      - '&7We''re trying to'
+      - '&7reconnect you.'
+      - ''
+      - '&emc.yourserver.com'
+    
+    # Will work from 1.8 and up, in 1.7 it may not work.
+    # PlaceholderAPI and Hex Colors are also supported.
+    actionbar:
+      enabled: true
+      message: '&cYou are currently in reconnect mode. Please wait until the server is fully
+        started.'
+    
+    # Will work from 1.9 and up, in versions <= 1.8 the bossbar will not be shown.
+    # PlaceholderAPI and Hex Colors are also supported.
+    bossbar:
+      enabled: true
+      message: '&cYou are currently in reconnect mode.'
+      color: RED
+      style: SOLID
+      progress: 1.0

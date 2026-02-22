@@ -1,0 +1,226 @@
+# job bossbars when you gain xp in a job.
+progress_bossbars: true
+
+# remove empty (?) lines in gui items
+gui_remove_empty_lines: true
+
+expinfo:
+  list_in_lore: 15
+  gui:
+    title: "<gradient:#562d1d:#4c243c>Статистика ➢ Рейтинг ➣ <gradient:#ce1e92:#aa00ff>Инфо"
+    blank_material: MAGENTA_STAINED_GLASS_PANE
+    jobitem:
+      name: "<job>"
+      lore:
+        - " <primary><1_action_value> <secondary><1_exp><gray><symbol_exp> <primary><1_money><gray><symbol_money> "
+        - " <primary><2_action_value> <secondary><2_exp><gray><symbol_exp> <primary><2_money><gray><symbol_money> "
+        - " <primary><3_action_value> <secondary><3_exp><gray><symbol_exp> <primary><3_money><gray><symbol_money> "
+        - " <primary><4_action_value> <secondary><4_exp><gray><symbol_exp> <primary><4_money><gray><symbol_money> "
+        - " <primary><5_action_value> <secondary><5_exp><gray><symbol_exp> <primary><5_money><gray><symbol_money> "
+        - " <primary><6_action_value> <secondary><6_exp><gray><symbol_exp> <primary><6_money><gray><symbol_money> "
+        - " <primary><7_action_value> <secondary><7_exp><gray><symbol_exp> <primary><7_money><gray><symbol_money> "
+        - " <primary><8_action_value> <secondary><8_exp><gray><symbol_exp> <primary><8_money><gray><symbol_money> "
+        - " <primary><9_action_value> <secondary><9_exp><gray><symbol_exp> <primary><9_money><gray><symbol_money> "
+        - " <primary><10_action_value> <secondary><10_exp><gray><symbol_exp> <primary><10_money><gray><symbol_money> "
+        - " <primary><11_action_value> <secondary><11_exp><gray><symbol_exp> <primary><11_money><gray><symbol_money> "
+        - " <primary><12_action_value> <secondary><12_exp><gray><symbol_exp> <primary><12_money><gray><symbol_money> "
+        - " <primary><13_action_value> <secondary><13_exp><gray><symbol_exp> <primary><13_money><gray><symbol_money> "
+        - " <primary><14_action_value> <secondary><14_exp><gray><symbol_exp> <primary><14_money><gray><symbol_money> "
+        - " <primary><15_action_value> <secondary><15_exp><gray><symbol_exp> <primary><15_money><gray><symbol_money> "
+        - ""
+        - " <primary>ЛКМ ↓ <dark_gray>| <secondary>ПКМ ↑ "
+        - " <gold>ℹ <primary>SHIFT <gray>— умножить на 5."
+leaderboard:
+  calculate_top: 100
+  list_in_lore: 10
+  gui:
+    title: "<gradient:#562d1d:#51282d>Статистика ➢ <gradient:#e43050:#d32283>Рейтинг ➣ <gradient:#4b243e:#431d56>Инфо"
+    blank_material: RED_STAINED_GLASS_PANE
+    jobitem:
+      name: "<job> <dark_gray>(<primary><min> <gray>— <secondary><max><dark_gray>)"
+      lore:
+        - " <primary><bold><1_position>.</bold> <1_displayname> <secondary><1_level> <gray>ур. "
+        - " <primary><bold><2_position>.</bold> <2_displayname> <secondary><2_level> <gray>ур. "
+        - " <primary><bold><3_position>.</bold> <3_displayname> <secondary><3_level> <gray>ур. "
+        - " <primary><bold><4_position>.</bold> <4_displayname> <secondary><4_level> <gray>ур. "
+        - " <primary><bold><5_position>.</bold> <5_displayname> <secondary><5_level> <gray>ур. "
+        - " <primary><bold><6_position>.</bold> <6_displayname> <secondary><6_level> <gray>ур. "
+        - " <primary><bold><7_position>.</bold> <7_displayname> <secondary><7_level> <gray>ур. "
+        - " <primary><bold><8_position>.</bold> <8_displayname> <secondary><8_level> <gray>ур. "
+        - " <primary><bold><9_position>.</bold> <9_displayname> <secondary><9_level> <gray>ур. "
+        - " <primary><bold><10_position>.</bold> <10_displayname> <secondary><10_level> <gray>ур. "
+        - " <gray>Вы <primary><level> <gray>ур. и на месте <secondary><position><gray>."
+        - ""
+        - ""
+        - " <primary>ЛКМ ↓ <dark_gray>| <secondary>ПКМ ↑ "
+        - " <gold>ℹ <primary>SHIFT <gray>— умножить на 5."
+gui:
+  change_page_cooldown: 40
+  title: "<gradient:#FF4600:#e93442>Статистика <gradient:#51282d:#431d56>➢ Рейтинг ➣ Инфо"
+  blank_material: ORANGE_STAINED_GLASS_PANE
+  jobitem:
+    name: "<job>"
+    lore:
+      - " <gradient:#6D6666:#938B8B:#777676><exp>/<next_exp> "
+      - " <primary><level> <progress> <secondary><next_level> "
+      - ""
+      - " <gray>В работе <job><gray>: "
+      - "  <gray>вы на <primary><position><gray> месте в рейтинге."
+      - "  <gray>заработано: <primary><total_money><money_symbol><gray>."
+      - ""
+      - " <gray><primary>ЛКМ <gray>— Рейтинг."
+      - " <gray><primary>ПКМ <gray>— Инфо."
+  navigation:
+    left:
+      material: ARROW
+      name: "<yellow><-"
+    right:
+      material: ARROW
+      name: "<yellow>->"
+
+# players with these gamemodes will not gain exp/money from jobs
+ignored_gamemodes:
+  - SPECTATOR
+  #- CREATIVE
+
+# materials that will not count when mined with a tool with silk touch.
+silktouch_blacklist:
+  - DIAMOND_ORE
+  - DEEPSLATE_DIAMOND_ORE
+
+command:
+  name: "jobs"
+  #if permission is omitted, everyone can use the command
+  #permission: "ujobs.command"
+  description: "меню работ"
+  aliases:
+    - "job"
+    - "ujob"
+    - "ujobs"
+    - "skill"
+    - "skills"
+
+messages:
+  reload: "<green>Перезагружено!"
+  page_turn:
+    sound: item.book.page_turn
+  leaderboard_take_lead:
+    chat: "<displayname> <gray>достиг <primary><level> <gray>ур. в <job> и занял <secondary><bold>1</bold><gray> место у <opponent_displayname><gray>."
+    sound: entity.ravager.celebrate
+  leaderboard_get_in_top_10:
+    chat: "<displayname> <gray>достиг <primary><level> <gray>ур. в <job> и вошёл в топ <secondary><bold>10</bold><gray>."
+    sound: entity.vindicator.celebrate
+  leaderboard_your_position_taken: "<displayname> <gray>достиг <primary><level> <gray>ур. в <job> и занял ваше <secondary><bold><position>.</bold> <gray>место."
+  leaderboard_take_someones_position:
+    chat: "<gray>Вы обогнали <opponent_displayname> в <job> и стали <secondary><bold><position>.</bold><gray>."
+    sound: entity.pillager.celebrate
+
+symbols:
+  money: "₽"
+  exp: опыт
+
+actions:
+  kill: "<gray>Убить</gray> <value>"
+  breed: "<gray>Разведение</gray> <value>"
+  break: "<gray>Сломать</gray> <value>"
+  tame: "<gray>Приручить</gray> <value>"
+  fish: "<gray>Поймать</gray> <value>"
+  enchant: "<gray>Зачаровать</gray> <value>"
+  anvil_merge: "<gray>Объединить в наковальне</gray> <value>"
+  generate_loot: "<gray>Открыть сундук</gray> <value>"
+  raid: "<gray>Защитить</gray> <value>"
+  craft: "<gray>Скрафтить</gray> <value>"
+  trade: "<gray>Торговать</gray> <value>"
+  harvest: "<gray>Собрать</gray> <value>"
+  smelt: "<gray>Переплавить</gray> <value>"
+
+special_values:
+  1: "1 ур."
+  2: "2 ур."
+  3: "3 ур."
+  4: "4 ур."
+  5: "5 ур."
+  6: "6 ур."
+  7: "7 ур."
+  8: "8 ур."
+  9: "9 ур."
+  10: "10 ур."
+  11: "11 ур."
+  12: "12 ур."
+  13: "13 ур."
+  14: "14 ур."
+  15: "15 ур."
+  16: "16 ур."
+  17: "17 ур."
+  18: "18 ур."
+  19: "19 ур."
+  20: "20 ур."
+  21: "21 ур."
+  22: "22 ур."
+  23: "23 ур."
+  24: "24 ур."
+  25: "25 ур."
+  26: "26 ур."
+  27: "27 ур."
+  28: "28 ур."
+  29: "29 ур."
+  30: "30 ур."
+
+  win: "Полный набег"
+  wave: "Волна набега"
+
+  desert_pyramid: "Пустынный храм"
+  abandoned_mineshaft: "Заброшенная шахта"
+  ancient_city: "Древний город"
+  ancient_city_ice_box: "Древний город"
+  bastion_bridge: "Мост бастиона"
+  bastion_other: "Остатки бастиона"
+  bastion_treasure: "Сокровищница бастиона"
+  buried_treasure: "Закопанный клад"
+  end_city_treasure: "Город Края"
+  igloo_chest: "Иглу"
+  jungle_temple: "Храм в джунглях"
+  pillager_outpost: "Аванпост разбойников"
+  ruined_portal: "Разрушенный портал"
+  shipwreck_map: "Карта кораблекрушения"
+  shipwreck_supply: "Кораблекрушение"
+  shipwreck_treasure: "Сокровище кораблекрушения"
+  simple_dungeon: "Подземелье"
+  stronghold_corridor: "Коридор крепости"
+  stronghold_crossing: "Крепость"
+  stronghold_library: "Библиотека крепости"
+  underwater_ruin_big: "Большие подводные руины"
+  underwater_ruin_small: "Подводные руины"
+  village/village_armorer: "Деревенский кузнец"
+  village/village_butcher: "Деревенский мясник"
+  village/village_cartographer: "Деревенский картограф"
+  village/village_desert_house: "Пустынная деревня"
+  village/village_fisher: "Деревенский рыбак"
+  village/village_fletcher: "Деревенский лучник"
+  village/village_mason: "Деревенский каменщик"
+  village/village_plains_house: "Деревня на равнине"
+  village/village_savanna_house: "Деревня в саванне"
+  village/village_shepherd: "Деревенский пастух"
+  village/village_snowy_house: "Снежная деревня"
+  village/village_taiga_house: "Тайговая деревня"
+  village/village_tannery: "Деревенский кожевник"
+  village/village_temple: "Деревенский священник"
+  village/village_toolsmith: "Деревенский оружейник"
+  village/village_weaponsmith: "Деревенский кузнец оружия"
+  woodland_mansion: "Лесной особняк"
+  bastion_hoglin_stable: "Стойло хоглинов"
+  jungle_temple_dispenser: "Раздатчик храма"
+  nether_bridge: "Мост Незера"
+  trial_chambers/corridor: "Коридор испытания"
+  trial_chambers/entrance: "Вход в испытание"
+  trial_chambers/intersection: "Развилка испытания"
+  trial_chambers/intersection_barrel: "Бочка в испытании"
+  trial_chambers/reward: "Награда испытания"
+  trial_chambers/reward_common: "Обычная награда"
+  trial_chambers/reward_ominous: "Зловещая награда"
+  trial_chambers/reward_ominous_common: "Зловещая обычная"
+  trial_chambers/reward_ominous_rare: "Зловещая редкая"
+  trial_chambers/reward_ominous_unique: "Зловещая уникальная"
+  trial_chambers/reward_rare: "Редкая награда"
+  trial_chambers/reward_unique: "Уникальная награда"
+  trial_chambers/supply: "Припасы испытания"

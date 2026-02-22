@@ -1,0 +1,129 @@
+#  █████▒▄▄▄       ██▓     ██▓     ▄▄▄▄    ▄▄▄       ▄████▄   ██ ▄█▀     ██████ ▓█████  ██▀███   ██▒   █▓▓█████  ██▀███
+#▓██   ▒▒████▄    ▓██▒    ▓██▒    ▓█████▄ ▒████▄    ▒██▀ ▀█   ██▄█▒    ▒██    ▒ ▓█   ▀ ▓██ ▒ ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒
+#▒████ ░▒██  ▀█▄  ▒██░    ▒██░    ▒██▒ ▄██▒██  ▀█▄  ▒▓█    ▄ ▓███▄░    ░ ▓██▄   ▒███   ▓██ ░▄█ ▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒
+#░▓█▒  ░░██▄▄▄▄██ ▒██░    ▒██░    ▒██░█▀  ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄      ▒   ██▒▒▓█  ▄ ▒██▀▀█▄    ▒██ █░░▒▓█  ▄ ▒██▀▀█▄
+#░▒█░    ▓█   ▓██▒░██████▒░██████▒░▓█  ▀█▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄   ▒██████▒▒░▒████▒░██▓ ▒██▒   ▒▀█░  ░▒████▒░██▓ ▒██▒
+# ▒ ░    ▒▒   ▓▒█░░ ▒░▓  ░░ ▒░▓  ░░▒▓███▀▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒   ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒▓ ░▒▓░   ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░
+# ░       ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░▒░▒   ░   ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░   ░ ░▒  ░ ░ ░ ░  ░  ░▒ ░ ▒░   ░ ░░   ░ ░  ░  ░▒ ░ ▒░
+# ░ ░     ░   ▒     ░ ░     ░ ░    ░    ░   ░   ▒   ░        ░ ░░ ░    ░  ░  ░     ░     ░░   ░      ░░     ░     ░░   ░
+#             ░  ░    ░  ░    ░  ░ ░            ░  ░░ ░      ░  ░            ░     ░  ░   ░           ░     ░  ░   ░
+#                                       ░           ░                                                ░
+# Made by CandiesJar | GitHub: github.com/sasi2006166 | Discord: https://discord.gg/dJ8DG2cSzt | Telegram: @CandiesJar
+# Addon configuration file
+
+settings:
+  
+  # STANDALONE = лобби используется как физический сервер ожидания при перезапуске sandbox.
+  # Игроки видят "RECONNECTING" и автоматически возвращаются на sandbox121 после рестарта.
+  mode: STANDALONE
+  
+  # Here you can set up the plugin reload's permission and message.
+  reload_permission: fallbackserver.reload
+  reload_message: '&7&lF&b&lS &8&l» &b&nFallback Server Addon %version%&r&7 reloaded
+    successfully.'
+  
+  # true: Normal players will not be able to see the /fsa output.
+  # false: Everyone will be able to see the simple "running fallbackserver" message.
+  hide_command: false
+  
+  # Support for faster addon methods using ProtocolLib.
+  # If you enable this, the plugin will use ProtocolLib for some features.
+  # The plugin will use ProtocolLib to handle server crashes (without it, you can't save your players from crashes).
+  # Requires ProtocolLib to be installed.
+  protocollib_support: true
+  
+  # Support for faster addon methods using PacketEvents.
+  # If you enable this, the plugin will use PacketEvents to send ping packets.
+  # The plugin will use PacketEvents to handle server crashes (without it, you can't save your players from crashes).
+  # Requires PacketEvents to be installed.
+  packetevents_support: true
+  
+  # NOTE: This will work only if you set up the mode to 'ADDON'.
+  addon:
+    
+    # If you enable this, the plugin will automatically shutdown itself when the work is done.
+    # It's normal if you see the plugin shutting down itself and is showing red in plugin's list.
+    auto_remove: false
+    
+    # NOTE: This shouldn't be changed unless you know what you're doing.
+    # This changes the number that the main fallbackserver plugin uses to check if the server is fully started.
+    # If you change this, you will need to change the fallbackserver plugin's config as well.
+    override_player_count_number: -1
+    
+    # NOTE: This shouldn't be changed unless you know what you're doing.
+    # The plugin will try to establish a secure connection with the Proxy only when all plugins are loaded into the server.
+    # This value indicates the maximum number of checks to be performed to check whether the plugins are all started.
+    # After that, the plugin will try to work anyway.
+    max_start_tries: 3
+    
+    # NOTE: This shouldn't be changed unless you know what you're doing.
+    # This changes the time (in seconds) to disable the addon after the server is started.
+    # If you are having problems with fallbackserver (in reconnect), you could increase this value.
+    disable_after: 30
+  
+  # NOTE: This will work only if you set up the mode to 'STANDALONE'.
+  standalone:
+    
+    # When a player joins the server, the plugin will automatically teleport him to the world spawn (/setworldspawn).
+    teleport_worldspawn: true
+    
+    # Accepted values: "SURVIVAL", "CREATIVE", "ADVENTURE", "SPECTATOR", "NONE".
+    join_gamemode: SURVIVAL
+    
+    # Depends on your server version! (Set "NONE" to disable this feature.)
+    # You can choose between values based on this link: https://shorturl.at/mZRL4
+    # 1.9 sounds are valid also for all updated versions.
+    join_sound: NONE
+    
+    # You can block some events here, to prevent players from doing something during the reconnect.
+    # Блокируем только опасное; чат, ходьба, строительство — разрешены
+    event_blocker:
+      
+      entity_spawn: true
+      damage: true
+      block_break: false
+      block_place: false
+      hunger: true
+      item_drop: true
+      item_pickup: true
+      interact: false
+      pvp: true
+      chat: false
+      move: false
+      command: false
+      weather_cycle: true
+    
+    # NOTE: If you want to disable the join/quit messages, set the values to "none".
+    join_message: '&7[&a+&7] %player_name%'
+    quit_message: '&7[&c-&7] %player_name%'
+    
+    # Отключено: режим FALLBACK — автопереподключения нет, уведомления не нужны
+    scoreboard:
+      enabled: false
+      update_interval: 20
+      title: '&e&lОЖИДАНИЕ'
+      lines:
+      - ''
+      - '&7Сервер перезагружается.'
+      - '&7Ожидай, скоро подключу.'
+      - ''
+      - '&7Можно ходить и общаться.'
+      - ''
+      - '&7/lobby &7— остаться в лобби'
+      - '&7(отменить автопереподключение)'
+      - ''
+    
+    # Will work from 1.8 and up, in 1.7 it may not work.
+    # PlaceholderAPI and Hex Colors are also supported.
+    actionbar:
+      enabled: false
+      message: '&eОжидание перезагрузки сервера. Можно ходить и писать в чат.'
+    
+    # Will work from 1.9 and up, in versions <= 1.8 the bossbar will not be shown.
+    # PlaceholderAPI and Hex Colors are also supported.
+    bossbar:
+      enabled: false
+      message: '&eОжидание — скоро подключу обратно'
+      color: YELLOW
+      style: SOLID
+      progress: 1.0

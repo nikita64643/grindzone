@@ -1,0 +1,345 @@
+# McMmoView - русский язык
+reloadMsg: "&aПлагин перезагружен!"
+noPermission: "&cНет прав для выполнения команды..."
+
+placeholderAPISucceedMsg: "&aPlaceholderAPI загружен. Пользовательские переменные включены!"
+placeholderAPIFailureMsg: "&4PlaceholderAPI не найден. Пользовательские переменные отключены!"
+
+playerNotOnline: "&7Игрок &a${player}&7 офлайн!"
+
+title: "&7Навыки mcMMO"
+
+skill:
+  ACROBATICS:
+    name: "&aАкробатика"
+    material: "GOLDEN_BOOTS"
+    lore:
+      - "Опыт за: падение"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Уклонение, Кувырок"
+    index: 19
+    isEnchant: false
+    custom-model-data: 0
+    tooltipStyle: ""
+    itemModel: ""
+  ALCHEMY:
+    name: "&aАлхимия"
+    material: "GOLD_INGOT"
+    lore:
+      - "Опыт за: варка зелий"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.0: Катализатор, Отвары"
+      - "&7Ур.10–100: новые ранги Отваров"
+    index: 20
+    isEnchant: false
+    custom-model-data: 0
+  ARCHERY:
+    name: "&aСтрельба"
+    material: "BOW"
+    lore:
+      - "Опыт за: стрельбу из лука"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Возврат стрел, Умелый выстрел"
+      - "&7Ур.10+: Запредельная стрельба, Ошеломление"
+    index: 21
+    isEnchant: false
+    custom-model-data: 0
+  AXES:
+    name: "&aТопоры"
+    material: "IRON_AXE"
+    lore:
+      - "Опыт за: использование топоров"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Крит.удар, Бронебойный удар"
+      - "&7Ур.5: Раскалыватель черепов, Владение топором"
+      - "&7Ур.10+: Запредельные топоры"
+      - "&7Ур.25: Мощный удар"
+    index: 22
+    isEnchant: false
+    custom-model-data: 0
+  SPEARS:
+    name: "&aКопьё"
+    material: "DIAMOND_SPEAR"
+    lore:
+      - "Опыт за: использование копья"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Навыки копья — см. /mcmmo"
+    index: 37
+    isEnchant: false
+    custom-model-data: 0
+    tooltipStyle: ""
+    itemModel: ""
+  CROSSBOWS:
+    name: "&aАрбалет"
+    material: "CROSSBOW"
+    lore:
+      - "Опыт за: использование арбалета"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Усиленный выстрел"
+      - "&7Ур.5: Трюковый выстрел"
+      - "&7Ур.10+: Запредельный арбалет"
+    index: 38
+    isEnchant: false
+    custom-model-data: 0
+  EXCAVATION:
+    name: "&aРаскопки"
+    material: "DIAMOND_SHOVEL"
+    lore:
+      - "Опыт за: копание блоков"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Археология"
+      - "&7Ур.5: Гига-бур"
+    index: 23
+    isEnchant: false
+    custom-model-data: 0
+  FISHING:
+    name: "&aРыболовство"
+    material: "FISHING_ROD"
+    lore:
+      - "Опыт за: рыбалку"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Охотник за сокровищами"
+      - "&7Ур.5: Подледная рыбалка"
+      - "&7Ур.15: Встряска"
+      - "&7Ур.20: Охотник за чудесами"
+    index: 24
+    isEnchant: false
+    custom-model-data: 0
+  HERBALISM:
+    name: "&aТравничество"
+    material: "GRASS_BLOCK"
+    lore:
+      - "Опыт за: сбор урожая"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Двойная добыча"
+      - "&7Ур.5: Озеленение"
+      - "&7Ур.20: Фермерская диета"
+      - "&7Ур.25: Живительное прикосновение"
+    index: 25
+    isEnchant: false
+    custom-model-data: 0
+  REPAIR:
+    name: "&aПочинка"
+    material: "ANVIL"
+    lore:
+      - "Опыт за: починку снаряжения"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Мастерство ремонта"
+      - "&7Ур.10: Волшебная ковка"
+      - "&7Ур.40: Суперремонт"
+    index: 29
+    isEnchant: false
+    custom-model-data: 0
+  SALVAGE:
+    name: "&aРазборка"
+    material: "GOLD_BLOCK"
+    lore:
+      - "Опыт за: рыбалку/починку"
+      - "&b--> &aУровень: ${xp}"
+      - "Рыбалка/Починка"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Коллекционер хлама"
+      - "&7Ур.10: Магическая переработка"
+    index: 30
+    isEnchant: false
+    custom-model-data: 0
+  SMELTING:
+    name: "&aПереплавка"
+    material: "FURNACE"
+    lore:
+      - "Опыт за: добычу/починку"
+      - "&b--> &aУровень: ${xp}"
+      - "Добыча/Починка"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.10: Экономия топлива"
+      - "&7Ур.10+: Удвоенная переплавка"
+    index: 31
+    isEnchant: false
+    custom-model-data: 0
+  SWORDS:
+    name: "&aМечи"
+    material: "DIAMOND_SWORD"
+    lore:
+      - "Опыт за: использование мечей"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Разрыв"
+      - "&7Ур.5: Рубящий удар"
+      - "&7Ур.10+: Запредельные мечи"
+      - "&7Ур.20: Контратака"
+    index: 32
+    isEnchant: false
+    custom-model-data: 0
+  TAMING:
+    name: "&aУкрощение"
+    material: "DIAMOND"
+    lore:
+      - "Опыт за: приручение животных"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Познание зверей, Зов природы"
+      - "&7Ур.10: Знание среды"
+      - "&7Ур.15: Укус | Ур.20: Избиение"
+      - "&7Ур.25: Густой мех | Ур.35: Святая гончая"
+    index: 33
+    isEnchant: false
+    custom-model-data: 0
+  TRIDENTS:
+    name: "&aТрезубец"
+    material: "TRIDENT"
+    lore:
+      - "Опыт за: использование трезубца"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.5: Пробивание"
+      - "&7Ур.10+: Запредельный трезубец"
+    index: 42
+    isEnchant: false
+    custom-model-data: 0
+  UNARMED:
+    name: "&aБезоружный"
+    material: "BONE_BLOCK"
+    lore:
+      - "Опыт за: рукопашный бой"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Стиль Стального кулака"
+      - "&7Ур.5: Берсерк"
+      - "&7Ур.20: Отражение стрел"
+      - "&7Ур.25: Разоружение | Ур.60: Железная хватка"
+    index: 39
+    isEnchant: false
+    custom-model-data: 0
+  MINING:
+    name: "&aШахтёрство"
+    material: "IRON_PICKAXE"
+    lore:
+      - "Опыт за: добычу камня и руды"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Двойная добыча"
+      - "&7Ур.5: Суперкрушитель"
+      - "&7Ур.10: Подрывная добыча"
+      - "&7Ур.100: Материнская жила"
+    index: 40
+    isEnchant: false
+    custom-model-data: 0
+  WOODCUTTING:
+    name: "&aЛесорубство"
+    material: "DIAMOND_AXE"
+    lore:
+      - "Опыт за: рубку деревьев"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.1: Сбор древесины"
+      - "&7Ур.5: Рубка деревьев"
+      - "&7Ур.15: Сдувание листвы"
+    index: 41
+    isEnchant: false
+    custom-model-data: 0
+  MACES:
+    name: "&aБулавы"
+    material: "MACE"
+    lore:
+      - "Опыт за: использование булавы"
+      - "&b--> &aУровень: ${xp}"
+      - "&b--> &aДо след. ур.: ${need}"
+      - "&b--> &aПрогресс: (${on}/${next})"
+      - ""
+      - "&6&lПривилегии:"
+      - "&7Ур.5: Калечение"
+      - "&7Ур.10: Раздавливание"
+      - "&7Ур.10+: Запредельные булавы"
+    index: 43
+    isEnchant: false
+    custom-model-data: 0
+  pane:
+    enable: true
+    index: 0,1,2,3,4,5,6,7,8,45,46,47,48,50,51,52,53,9,18,27,36,17,26,35,44
+    material: BLACK_STAINED_GLASS_PANE
+    isEnchant: false
+    name: "&8[&7Заполнитель&8]"
+    lore:
+      - "&7Не нажимайте сюда!"
+    custom-model-data: 0
+  back:
+    enable: true
+    index: 49
+    material: PLAYER_HEAD
+    headBase: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllYTFkODYyNDdmNGFmMzUxZWQxODY2YmNhNmEzMDQwYTA2YzY4MTc3Yzc4ZTQyMzE2YTEwOThlNjBmYjdkMyJ9fX0="
+    isEnchant: false
+    name: "&8[&aНазад&8]"
+    lore:
+      - "&f- &7Нажмите, чтобы вернуться"
+    custom-model-data: 0
+    command: "menu"
+  me:
+    enable: true
+    index: 13
+    material: PLAYER_HEAD
+    head: "${player}"
+    isEnchant: false
+    name: "&aОбщая сила"
+    custom-model-data: 0
+    lore:
+      - "&aТекущая сила: ${all}"

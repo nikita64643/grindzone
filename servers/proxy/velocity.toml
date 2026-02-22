@@ -1,0 +1,40 @@
+bind = "0.0.0.0:25565"
+# What should be the MOTD? This gets displayed when the player adds your server to
+# their server list. Only MiniMessage format is accepted.
+motd = "Minecruft - Lobby"
+show-max-players = 500
+# Offline mode: allows cracked (non-premium) clients
+online-mode = false
+player-info-forwarding-mode = "modern"
+forced-hosts = {}
+#If you are using modern or BungeeGuard IP forwarding, configure a file that contains a unique secret here.
+#The file is expected to be UTF-8 encoded and not empty.
+forwarding-secret-file = "forwarding.secret"
+config-version = "2.7"
+#Should the proxy enforce the new public key security standard? By default, this is on.
+# Disabled: fixes "Invalid session" with some launchers
+force-key-authentication = false
+
+[servers]
+	lobby = "127.0.0.1:25580"
+	sandbox121 = "127.0.0.1:25570"
+	sandbox165 = "127.0.0.1:25566"
+	try = ["lobby"]
+[advanced]
+	connection-timeout = 3000
+	read-timeout = 30000
+	tcp-fast-open = false
+	show-ping-requests = false
+	#Allows players transferred from other hosts via the
+	#Transfer packet (Minecraft 1.20.5) to be received.
+	accepts-transfers = false
+	compression-level = -1
+	haproxy-protocol = false
+	compression-threshold = 256
+	bungeecord-plugin-message-channel = true
+	login-ratelimit = 3000
+[query]
+	port = 25565
+	show-plugins = false
+	map = "Minecruft"
+	enabled = false

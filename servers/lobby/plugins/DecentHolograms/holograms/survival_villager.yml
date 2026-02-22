@@ -1,0 +1,21 @@
+location: world_lobby:1.5:10:1.5
+enabled: true
+display-range: 64
+update-range: 64
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+  - lines:
+      - content: "&a&lВЫЖИВАНИЕ"
+        height: 0.3
+        offsetX: 0.0
+        offsetZ: 0.0
+      - content: "&f%bungee_total% Игроков"
+        height: 0.3
+        offsetX: 0.0
+        offsetZ: 0.0
+      - content: "&a&lНАЖМИТЕ ДЛЯ ИГРЫ"
+        height: 0.3
+        offsetX: 0.0
+        offsetZ: 0.0

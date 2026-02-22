@@ -1,0 +1,29 @@
+# Legend: 5 мин, 1 монета
+messages:
+  entered: "&aВы вошли в AFK-зону! &7(Legend: награда каждые 5 мин)"
+  left: "&cВы вышли из AFK-зоны."
+  reward:
+    - "&aВы получили &f1 AFK-монету&a!"
+
+in-zone:
+  title: ""
+  subtitle: ""
+  actionbar: "&eДо награды: &a%time%"
+  bossbar:
+    name: "&a⌚ AFK-зона &7| До награды: &e%time% &7| &a+1 монета каждые 5 мин"
+    color: GREEN
+    style: NOTCHED_20
+
+permission: "axafkzone.tier.legend"
+reward-time-seconds: 300
+roll-amount: 1
+
+rewards:
+  - chance: 100.0
+    display: "1 AFK-монета"
+    commands:
+      - "afk give %player% 1"
+
+zone:
+  location1: "world_sandbox,8659467,62,-3812039"
+  location2: "world_sandbox,8659518,87,-3811998"

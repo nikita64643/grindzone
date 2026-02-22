@@ -1,0 +1,46 @@
+# Citizens NPC Storage
+npc:
+- name: ''
+  traits:
+    age:
+      age: 0
+    commandtrait:
+      commands:
+      - command: menu
+        hand: RIGHT
+        player: true
+    locked: true
+    type: VILLAGER
+    scoreboardtrait:
+      tags:
+      - CITIZENS_NPC
+    hologramtrait:
+      lineHeight: 0.3
+      viewRange: 68
+      lines:
+      - margin:
+          top: 0.0
+          bottom: 0.0
+        text: '&a&lВЫЖИВАНИЕ'
+      - margin:
+          top: 0.0
+          bottom: 0.0
+        text: '&f%bungee_total% Игроков'
+      - margin:
+          top: 0.0
+          bottom: -0.3
+        text: '&a&lНАЖМИТЕ ДЛЯ ИГРЫ'
+  type: villager
+  location:
+    world: world_lobby
+    x: '1.0'
+    y: '7.0'
+    z: '1.5'
+    yaw: '180'
+    pitch: '0'
+  uuid: 62186a27-4a3a-4daf-894a-ff973df54663
+  traitnames: spawned,scoreboardtrait,commandtrait,hologramtrait,location,type
+  navigator:
+    usedefaultstuckaction: false
+    speedmodifier: 1.0
+    avoidwater: false

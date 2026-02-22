@@ -1,0 +1,64 @@
+# Конфигурация категорий
+# Порядок, иконки и названия
+#
+# slot: The inventory slot position (0-44 for a 54-slot GUI, -1 = hidden)
+# icon: Override the default icon (optional, must be a valid material name)
+# name: Override the default display name (optional)
+#
+# CUSTOM_1 through CUSTOM_20 are placeholder categories you can enable
+# by setting their slot to a valid position and customizing name/icon
+
+categories:
+  MISC:
+    slot: 11
+    name: '&6Разное'
+  BLOCKS:
+    slot: 12
+    name: '&6Блоки'
+  REDSTONE:
+    slot: 13
+    name: '&6Редстоун'
+  TOOLS:
+    slot: 14
+    name: '&6Инструменты'
+  ARMOR:
+    slot: 15
+    name: '&6Броня'
+  FOOD:
+    slot: 20
+    name: '&6Еда'
+  FARMING:
+    slot: 21
+    name: '&6Фермерство'
+  WOOD:
+    slot: 22
+    name: '&6Дерево'
+  PERMISSIONS:
+    slot: 23
+    name: '&6Права'
+  SERVER_SHOP:
+    slot: 24
+    name: '&6Сервер'
+  PLAYER_SHOPS:
+    slot: 31
+    name: '&6Игроки'
+  CUSTOM_1:
+    slot: -1
+  CUSTOM_2:
+    slot: -1
+  CUSTOM_3:
+    slot: -1
+  CUSTOM_4:
+    slot: -1
+  CUSTOM_5:
+    slot: -1
+  CUSTOM_6:
+    slot: -1
+  CUSTOM_7:
+    slot: -1
+  CUSTOM_8:
+    slot: -1
+  CUSTOM_9:
+    slot: -1
+  CUSTOM_10:
+    slot: -1

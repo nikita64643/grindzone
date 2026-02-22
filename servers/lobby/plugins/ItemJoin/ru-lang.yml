@@ -1,0 +1,129 @@
+# --{ =-=-=-=-=-=-=-=-=-= ItemJoin's Русская локализация, от Sharper =-=-=-=-=-=-=-=-=-= }--
+# Если вы не хотите, чтобы сообщение было отправлено, полностью удалите его снизу или оставьте его пустым.
+
+# Изменение этого приведет к поломке и восстановлению файла.
+ru-Version: 8
+
+# Это префикс, который будет отправляться в начале каждого сообщения в языковом файле.
+Prefix: '&7[&eItemJoin&7]'
+
+# Это просто общие сообщения, отправляемые с использованием элементов плагина.
+general:
+  failedOverwrite: '%prefix% &cНе удалось &fвыдать вам &b%fail_count% &fпредмет(а), потому что вы не имеете права &6перезаписать &fпредметы'
+  failedInventory: '%prefix% &cНе удалось &fвыдать вам &b%fail_count% &fпредмет(а), потому что ваш инвентарь &cполный'
+  econSuccess: '%prefix% &fКоманда &aуспешно &fвыполнена за &b$%cost%'
+  econFailed: '%prefix% &fУ вас &cнедостаточно &fденег, чтобы выполнить эту команду! \n%prefix% &fВаш баланс: &a%balance%$ &fа услуга стоит: &b$%cost%'
+  itemSuccess: '%prefix% &aУспешно выполнила команду для &e%cost% %item_type%(s)&a.'
+  itemFailed: '%prefix% &cВам не хватает &4%item_type%&c запустить эту команду! \n%prefix% &cУ тебя есть &4%balance% &cнеобходимых &4%cost% %item_type%(s)&c.'
+  warmingUp: '%prefix% &fПредмет: &7[&a%item%&7] &aразогревается...'
+  warmingTime: '%prefix% &fИспользование: &7[&a%item%&7] &fначнется через &b%time_left% &fсекунд'
+  warmingHalted: '%prefix% &fИспользование: &7[&a%item%&7] &aуспешно &cотменено!'
+
+# Сообщения для игрока от команд плагина.
+commands:
+  default:
+    unknownCommand: '%prefix% &fДанной команды &cнет&f! \n%prefix% &fВВедите: &3&l/ItemJoin Help &fдля справки'
+    noPermission: '%prefix% &fУ вас &fнедостаточно &fправ для выполнения данной команды!'
+    configReload: '%prefix% &fКонфигурация &c&lItemJoin &8- &aперезагруженна&f!'
+    noPlayer: '%prefix% &fВы должны выполнять эту команду в игре!'
+    noTarget: '%prefix% &fИгрок: &f&l%target_player% &cне найден&f!'
+  menu:
+    openMenu: '%prefix% &fМеню для создания предметов &aоткрыто'
+    itemSaved: '%prefix% &7[&a%item%&7] &aуспешно сохранён!'
+    itemRemoved: '%prefix% &7[&a%item%&7] &aуспешно &cудалён!'
+    noInteger: '%prefix% &c&l&nОшибка:&f Значение: &b%input% &fимеет &cне целое &fчисло!'
+    noMaterial: '%prefix% &c&l&nОшибка:&f Значение: &b%input% &cне имеет &fподходящий материал!'
+    inputType: '%prefix% &fВВедите: &b%input% &fкоторый вы хотите &aиметь &fна вашем предмете'
+    inputSet: '%prefix% &fПредмет(ы): &b%input% &aуспешно установлен(ы)!'
+    inputExample: '%prefix% &fПример: &3%input_example%'
+  item:
+    noItemHeld: '%prefix% &fВы должны держать предмет в &aруке&f!'
+    noItem: '%prefix% &fПредмет: &7[&a%item%&7] &cне найден!'
+    badCommand: '%prefix% &cВы не можете использовать команду &4&l%command%&c для этого предмета!'
+  info:
+    material: '&fID предмета &7(Тип материала)&f: &7[&a%item%&7]'
+    data: '&fЗначение предмета &7(Под-тип материала)&f: &7[&a%item%&7]'
+  query:
+    node: '&aУзел: &e&l%item%'
+    material: '&aМатериал: &e&l%item_type%'
+    slot: '&aСлот: &e&l%item_slot%'
+    permission: '&aРазрешение: %item_permission%'
+    badSyntax: '%prefix% &cНеправильное использование! Синтаксис: /itemjoin query <itemname>!'
+  list:
+    worldHeader: '&e&l%world%:'
+    itemRow: '&a&l   &a%item%'
+    noItems: '&c&l   &fВ этом мире не определён &cни один элемент'
+  world:
+    worldFound: '&fПоиск миров:'
+    worldHeader: '&fВы в мире:'
+    worldRow: '&8- &e&l%world%'
+  updates:
+    checkRequest: '%prefix% &f&l%player% &fсделал(а) запрос на &aобновление &fплагина!'
+    updateRequest: '%prefix% &f&l%player% &fзапросил(а) &aпринудительное обновление &fплагина!'
+  get:
+    givenYou: '%prefix% &fВам выдано &b%amount%x &7[&a%item%&7]'
+    givenYou_All: '%prefix% &fВам выдали &aвсе &fпредметы'
+    givenTarget: '%prefix% &fВы выдали &f&l%target_player% &b%amount%x &7[&a%item%&7]'
+    givenTarget_All: '%prefix% &fВы выдали игроку &f&l%target_player% &aвсе &fпредметы'
+    givenOnline: '%prefix% &fВы выдали предмет(ы): &b%amount% &7[&a%item%&7]&f игроку &f&l%players%'
+    targetTriedGive: '%prefix% &f&l%target_player% &cпытался &fвыдать вам &7[&a%item%&7] &fно этот предмет уже &aесть &fв вашем инвентаре!'
+    targetTriedGive_All: '%prefix% &f&l%target_player% &fпопытался выдать вам &aвсе &fпредметы &fно они уже &aесть &fу вас в инвентаре'
+    failedInventory: '%prefix% &fВы &aуже имеете &fпредмет &7[&b%item%&7]'
+    failedInventory_All: '%prefix% &fВы уже &aимеете &aвсе &fпредметы'
+    targetFailedInventory: '%prefix% &f&l%target_player% &fуже &aимеет &fэтот предмет  &7[&a%item%&7]'
+    targetFailedInventory_All: '%prefix% &f&l%target_player% &fуже имеет &aвсе &fпредметы'
+    onlineFailedInventory: '%prefix% &fВсе &aонлайн &fигроки уже &aимеют &fэтот предмет &7[&a%item%&7]'
+    targetNoPermission: '%prefix% &f&l%target_player% &cне имеет прав &fдля получения предмета: &7[&a%item%&7]'
+    targetNoPermission_All: '%prefix% &f&l%target_player% &cне имеет прав &fдля получения предмета поэтому он &lне получил &aвсе &fпредметы'
+    noPermission: '%prefix% &fУ вас &cнедостаточно прав &fдля получения предмета: &7[&a%item%&7]'
+    noPermission_All: '%prefix% &cУ вас нету прав для получения предмета поэтому &lне &bвсе &cпредметы были выданы'
+    usageSyntax: '%prefix% &fИспользование: &3&l/ItemJoin get &8&l<&3&litemname&8&l> &8&l<&3&lplayer&8&l> &fвыполняется через &bконсоль&f!'
+    badSyntax: '%prefix% &cНекорректное использование! \n%prefix% &fВВедите: &3&l/ItemJoin get &8&l<&3&litemname&8&l> \n%prefix% &fЛибо: &3&l/ItemJoin get &8&l<&3&litemname&8&l> &8&l<&3&lamount&8&l>'
+    badOnlineSyntax: '%prefix% &cНекоректное использование! \n%prefix% &fВВедите: &3&l/itemjoin getOnline &8&l<&3&litemname&8&l> \n%prefix% &fЛибо: &3&l/itemjoin getOnline &8&l<&3&litemname&8&l> &8&l<&3&lamount&8&l>'
+  remove:
+    removedYou: '%prefix% &b%amount%x &7[&a%item%&7]&f было &cудалено &fиз твоего инвентаря!'
+    removedYou_All: '%prefix% &fВсе предметы были &cудалены &fиз вашего инвентаря!'
+    removedTarget: '%prefix% &fВы &cудалили &b%amount%x &7[&a%item%&7]&f игроку &f&l%target_player%'
+    removedTarget_All: '%prefix% &fВы &cудалили &fвсе предметы у &f&l%target_player%'
+    removedOnline: '%prefix% &fВы &cудалили &b%amount% &7[&a%item%&7]&f игроку &f&l%players%'
+    targetTriedRemoval: '%prefix% &f&l%target_player% &fпопытался &cудалить &fвам предметы &7[&a%item%&7]&f но они &cне найдены &fв вашем инвентаре!'
+    targetTriedRemoval_All: '%prefix% &f&l%target_player% &fпопытался &cудалить &fу вас все предметы &fно в вашем инвентаре их &cнет&f!'
+    failedInventory: '%prefix% &fПредмет: &7[&a%item%&7] &cне найден &fв твоем инвентаре!'
+    failedInventory_All: '%prefix% &fУ вас в инвентаре &cне обнаруждено &aопределенных предметов!'
+    targetFailedInventory: '%prefix% &fПредмет: &7[&a%item%&7] &cне найден &fв инвентаре у &f&l%target_player%'
+    targetFailedInventory_All: '%prefix% &fУ игрока &f&l%target_player% &fв инвентаре &cне обнаружено &fопределенных предметов!'
+    onlineFailedInventory: '%prefix% &fПредмет: &7[&a%item%&7] &cне найден &fв инвентаре &aонлайн &fигроков'
+    usageSyntax: '%prefix% &fИспользование: &3&l/ItemJoin remove &8&l<&3&litemname&8&l> &8&l<&3&lplayer&8&l> &fвыполняется через &bконсоль&f!'
+    badSyntax: '%prefix% &cНекоректное использование! \n%prefix% &fВВедите: &3&l/ItemJoin remove &8&l<&3&litemname&8&l>'
+    badOnlineSyntax: '%prefix% &cНекоректное использование! \n%prefix% &fВВедите: &3&l/ItemJoin removeOnline &8&l<&3&litemname&8&l>'
+  database:
+    purgeWarn: '%prefix% &fОчистка базы данных удалит все &2%purge_data% данные для &f&l%target_player%'
+    purgeSuccess: '%prefix% &aВы очистили в базе данных файл  &2%purge_data% для &f&l%target_player%'
+    purgeConfirm: '%prefix% &aУ вас есть &25&f-ть секунд чтобы ввести: &3%command% \n%prefix% &fДля того чтобы &aподтвердить &fотчистку баз данных'
+    purgeTimeOut: '%prefix% &fВаша отчистка &cотменена&f! \n%prefix% &fВы &cне подтвердили &fотчистку баз данных в течение &25&f-ти секунд'
+  enabled:
+    forPlayer: '%prefix% &fВы &eвключили &fвсе предметы игроку &f&l%target_player%'
+    forTarget: '%prefix% &f&l%player% &aвключил &aвам все предметы'
+    forPlayerFailed: '%prefix% &cПредметы уже &aвключены &fу игрока &f&l%player%'
+    forPlayerWorld: '%prefix% &aВы &aвключили &fпредметы в мире &7[&e&l%world%&7] &fигроку &f&l%player%'
+    forTargetWorld: '%prefix% &f&l%player% &aвключил &fпредметы в мире &7[&e&l%world%&7] &fдля вас'
+    forPlayerWorldFailed: '%prefix% &fВы уже &aвключили &fпредметы в мире &7[&e&l%world%&7] &fдля игрока &f&l%player%'
+    globalPlayers: '%prefix% &fВы &aвключили &fвсе предметы &fдля всех игроков'
+    globalPlayersFailed: '%prefix% &fПредметы уже &aвключены &fу всех игроков'
+    toggleEnable: '%prefix% &aВы включили элемент &b%item%&a, и теперь он будет предоставлен.'
+    togglePlayerFailed: '%prefix% &cВы не можете включить элемент %item%, так как все элементы отключены для вас глобально!'
+  disabled:
+    forPlayer: '%prefix% &fВы &cвыключили &fвсе предметы игроку &f&l%target_player%'
+    forTarget: '%prefix% &f&l%player% &aвыключил &fвам все предметы'
+    forPlayerFailed: '%prefix% &fПредметы уже &cвыключены &fу игрока &f&l%player%'
+    forPlayerWorld: '%prefix% &fВы &cвыключили &fпредметы в мире &7[&e&l%world%&7] &aигроку &f&l%player%'
+    forTargetWorld: '%prefix% &f&l%player% &cвыключил вам предметы в мире &7[&e&l%world%&7]'
+    forPlayerWorldFailed: '%prefix% &cВы уже &cвыключили предметы в мире &7[&e&l%world%&7] &fигроку &f&l%player%'
+    globalPlayers: '%prefix% &fВы &cвыключили &fвсе предметы &fдля всех игроков'
+    globalPlayersFailed: '%prefix% &fПредметы уже &cотключены &fдля всех игроков'
+    toggleDisable: '%prefix% &cВы отключили предмет &b%item%&c и он больше не будет выдаваться.'
+    togglePlayerFailed: '%prefix% &cВы не можете отключить элемент %item%, так как все элементы отключены для вас глобально!'
+
+# Эти заполнители относятся к сообщениям плагина.
+placeholders:
+  PLAYER_INTERACT: 'неизвестный'

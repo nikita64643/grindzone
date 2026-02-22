@@ -1,0 +1,19 @@
+# DeluxeMenus 1.14.2-DEV-209 main configuration file
+#
+# A full wiki on how to use this plugin can be found at:
+# https://wiki.helpch.at/helpchat-plugins/deluxemenus
+
+check_updates: true
+debug: LOW
+use_admin_commands_in_menus_list: false
+menus_list_page_size: 10
+metas_list_page_size: 15
+# DeluxeMenus - GrindZone lobby
+# Add to gui_menus section if it exists, or merge with default
+gui_menus:
+  modes:
+    file: modes.yml
+  server_select:
+    file: server_select.yml
+  server_select_121:
+    file: server_select_121.yml

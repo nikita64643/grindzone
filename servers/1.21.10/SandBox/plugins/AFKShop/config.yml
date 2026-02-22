@@ -1,0 +1,45 @@
+title: "&e&lII &6&lAFK SHOP &e&lII"
+
+items:
+  golden_apple_8:
+    slot: 0
+    material: GOLDEN_APPLE
+    amount: 8
+    price: 8
+    name: "&6Золотое яблоко x8"
+  experience_bottle_64:
+    slot: 1
+    material: EXPERIENCE_BOTTLE
+    amount: 64
+    price: 15
+    name: "&dПузырёк опыта x64"
+  beacon:
+    slot: 2
+    material: BEACON
+    amount: 1
+    price: 13
+    name: "&bМаяк"
+  name_tag:
+    slot: 3
+    material: NAME_TAG
+    amount: 1
+    price: 8
+    name: "&fБирка"
+  ominous_bottle:
+    slot: 4
+    material: OMINOUS_BOTTLE
+    amount: 1
+    price: 15
+    name: "&5Зловещая бутылочка"
+  totem:
+    slot: 5
+    material: TOTEM_OF_UNDYING
+    amount: 1
+    price: 20
+    name: "&6Тотем бессмертия"
+  enchanted_golden_apple:
+    slot: 6
+    material: ENCHANTED_GOLDEN_APPLE
+    amount: 1
+    price: 20
+    name: "&6Зачарованное яблоко"

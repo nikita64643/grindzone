@@ -1,0 +1,14 @@
+# Команда награды (%player% заменяется на имя игрока)
+reward-command: "afk give %player% 1"
+# Сообщение при получении награды
+reward-title: "&aВы получили &f1 AFK-монету&a!"
+
+# Actionbar над хотбаром (таймер обратного отсчёта)
+actionbar:
+  enabled: true
+  format: "&eДо награды: &a%time%"
+
+# BossBar (полоска сверху экрана)
+bossbar:
+  enabled: true
+  format: "&a⌚ AFK-зона &7| До награды: &e%time%"

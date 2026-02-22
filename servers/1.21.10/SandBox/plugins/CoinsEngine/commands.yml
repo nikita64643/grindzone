@@ -1,0 +1,64 @@
+Commands:
+  add:
+    Children:
+      Enabled: true
+      Aliases: give
+    Dedicated:
+      Enabled: false
+      Aliases: addmoney
+  set:
+    Children:
+      Enabled: true
+      Aliases: set
+    Dedicated:
+      Enabled: false
+      Aliases: setmoney
+  balance:
+    Children:
+      Enabled: true
+      Aliases: balance
+    Dedicated:
+      Enabled: true
+      Aliases: balance,bal
+  top:
+    Children:
+      Enabled: true
+      Aliases: top
+    Dedicated:
+      Enabled: true
+      Aliases: balancetop,baltop
+  addall:
+    Children:
+      Enabled: true
+      Aliases: giveall
+    Dedicated:
+      Enabled: false
+      Aliases: ecogiveall
+  payments:
+    Children:
+      Enabled: true
+      Aliases: payments
+    Dedicated:
+      Enabled: true
+      Aliases: paytoggle,payments
+  pay:
+    Children:
+      Enabled: true
+      Aliases: pay
+    Dedicated:
+      Enabled: true
+      Aliases: pay
+  exchange:
+    Children:
+      Enabled: true
+      Aliases: exchange
+    Dedicated:
+      Enabled: false
+      Aliases: exchange
+  remove:
+    Children:
+      Enabled: true
+      Aliases: remove
+    Dedicated:
+      Enabled: false
+      Aliases: takemoney
